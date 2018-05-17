@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6c9e80ab95de4ceb868c044c0317a134" Name="Diagram1">
+        <EntityTypeShape EntityType="QLPMN2Model.chitietcauhinh" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLPMN2Model.chitietdanhgiatrangthietbi" Width="1.5" PointX="5.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLPMN2Model.chitietdieuchuyenthietbi" Width="1.5" PointX="5.25" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLPMN2Model.chitietsuachuathietbi" Width="1.5" PointX="8.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLPMN2Model.chitiethoadonbosung" Width="1.5" PointX="8" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLPMN2Model.danhgiatrangthietbi" Width="1.5" PointX="3" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLPMN2Model.dieuchuyentrangthietbi" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLPMN2Model.hoadonmuabosung" Width="1.5" PointX="5.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLPMN2Model.hoadonsuachua" Width="1.5" PointX="6" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLPMN2Model.phancaptinhtrang" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLPMN2Model.phongmay" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLPMN2Model.tinhtrangthietbi" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLPMN2Model.trangthietbi" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <AssociationConnector Association="QLPMN2Model.FK_chitiethoadonbosung_chitietcauhinh" ManuallyRouted="false" />
+        <AssociationConnector Association="QLPMN2Model.FK_trangthietbi_chitietcauhinh1" ManuallyRouted="false" />
+        <AssociationConnector Association="QLPMN2Model.FK_chitietdanhgiatrangthietbi_danhgiatrangthietbi" ManuallyRouted="false" />
+        <AssociationConnector Association="QLPMN2Model.FK_chitietdanhgiatrangthietbi_trangthietbi" ManuallyRouted="false" />
+        <AssociationConnector Association="QLPMN2Model.FK_chitietdieuchuyenthietbi_dieuchuyentrangthietbi" ManuallyRouted="false" />
+        <AssociationConnector Association="QLPMN2Model.FK_chitietdieuchuyenthietbi_tinhtrangthietbi" ManuallyRouted="false" />
+        <AssociationConnector Association="QLPMN2Model.FK_chitietdieuchuyenthietbi_trangthietbi" ManuallyRouted="false" />
+        <AssociationConnector Association="QLPMN2Model.FK_chitietsuachuathietbi_hoadonsuachua" ManuallyRouted="false" />
+        <AssociationConnector Association="QLPMN2Model.FK_chitietsuachuathietbi_trangthietbi" ManuallyRouted="false" />
+        <AssociationConnector Association="QLPMN2Model.FK_chitiethoadonbosung_hoadonmuabosung" ManuallyRouted="false" />
+        <AssociationConnector Association="QLPMN2Model.FK_dieuchuyentrangthietbi_phongmay" ManuallyRouted="false" />
+        <AssociationConnector Association="QLPMN2Model.FK_dieuchuyentrangthietbi_phongmay1" ManuallyRouted="false" />
+        <AssociationConnector Association="QLPMN2Model.FK_tinhtrangthietbi_phancaptinhtrang" ManuallyRouted="false" />
+        <AssociationConnector Association="QLPMN2Model.FK_trangthietbi_phongmay" ManuallyRouted="false" />
+        <AssociationConnector Association="QLPMN2Model.FK_tinhtrangthietbi_trangthietbi" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

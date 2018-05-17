@@ -1,0 +1,2217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="QLPMN2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="chitietcauhinh">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="int" Nullable="false" />
+          <Property Name="vixuly" Type="varchar" MaxLength="10" />
+          <Property Name="ram" Type="varchar" MaxLength="10" />
+          <Property Name="diacung" Type="varchar" MaxLength="10" />
+          <Property Name="manhinh" Type="varchar" MaxLength="50" />
+          <Property Name="mota" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="chitietdanhgiatrangthietbi">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="thietbima" Type="varchar" MaxLength="50" />
+          <Property Name="danhgiama" Type="uniqueidentifier" />
+          <Property Name="capchatluong" Type="varchar" MaxLength="10" />
+          <Property Name="ketqua" Type="nvarchar" MaxLength="50" />
+          <Property Name="thoigian" Type="datetime" />
+        </EntityType>
+        <EntityType Name="chitietdieuchuyenthietbi">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="thietbima" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="dondcma" Type="uniqueidentifier" />
+          <Property Name="danhgiama" Type="uniqueidentifier" />
+          <Property Name="ngaydieuchuyen" Type="datetime" />
+        </EntityType>
+        <EntityType Name="chitietsuachuathietbi">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="hoadonma" Type="uniqueidentifier" />
+          <Property Name="thietbima" Type="varchar" MaxLength="50" />
+          <Property Name="ngaysuachua" Type="datetime" />
+          <Property Name="chitiethonghoc" Type="nvarchar" MaxLength="100" />
+          <Property Name="nguoisuachua" Type="nvarchar" MaxLength="100" />
+          <Property Name="ghinhan" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="chitiethoadonbosung">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ten" Type="nvarchar" MaxLength="50" />
+          <Property Name="dongia" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="cauhinhma" Type="int" />
+          <Property Name="hoadonma" Type="uniqueidentifier" />
+          <Property Name="ghinhan" Type="bit" />
+        </EntityType>
+        <EntityType Name="danhgiatrangthietbi">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="hienthima" Type="nvarchar" MaxLength="20" />
+          <Property Name="nguoidanhgia" Type="nvarchar" MaxLength="50" />
+          <Property Name="ngaydanhgia" Type="datetime" />
+          <Property Name="mota" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="dieuchuyentrangthietbi">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="hienthima" Type="nvarchar" MaxLength="20" />
+          <Property Name="nguoidieuchuyen" Type="nvarchar" MaxLength="50" />
+          <Property Name="ngaydieuchuyen" Type="datetime" />
+          <Property Name="phongdima" Type="varchar" MaxLength="20" />
+          <Property Name="phongdenma" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="hoadonmuabosung">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="hienthima" Type="nvarchar" MaxLength="20" />
+          <Property Name="nguoicap" Type="nvarchar" MaxLength="50" />
+          <Property Name="ngaycap" Type="datetime" />
+          <Property Name="soluong" Type="int" />
+          <Property Name="mota" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="hoadonsuachua">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="hienthima" Type="nvarchar" MaxLength="20" />
+          <Property Name="nguoicap" Type="nvarchar" MaxLength="50" />
+          <Property Name="ngaycap" Type="datetime" />
+          <Property Name="donvisuachua" Type="nvarchar" MaxLength="50" />
+          <Property Name="mota" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="phancaptinhtrang">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="int" Nullable="false" />
+          <Property Name="tinhtrang" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="phongmay">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="ten" Type="nvarchar" MaxLength="50" />
+          <Property Name="soluongbienche" Type="int" />
+          <Property Name="soluongthucte" Type="int" />
+        </EntityType>
+        <EntityType Name="tinhtrangthietbi">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="thietbima" Type="varchar" MaxLength="50" />
+          <Property Name="tinhtrangma" Type="int" />
+          <Property Name="nguoidanhgia" Type="nvarchar" MaxLength="100" />
+          <Property Name="ngaydanhgia" Type="date" />
+          <Property Name="mota" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="trangthietbi">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ten" Type="nvarchar" MaxLength="50" />
+          <Property Name="dongia" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="ghichu" Type="nvarchar" MaxLength="100" />
+          <Property Name="cauhinhma" Type="int" />
+          <Property Name="phongmayma" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'QLPMN2.dbo.username' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="username">
+          <Property Name="id" Type="varchar" MaxLength="50" />
+          <Property Name="password" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+        <Association Name="FK_chitietdanhgiatrangthietbi_danhgiatrangthietbi">
+          <End Role="danhgiatrangthietbi" Type="Self.danhgiatrangthietbi" Multiplicity="0..1" />
+          <End Role="chitietdanhgiatrangthietbi" Type="Self.chitietdanhgiatrangthietbi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="danhgiatrangthietbi">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="chitietdanhgiatrangthietbi">
+              <PropertyRef Name="danhgiama" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_chitietdanhgiatrangthietbi_trangthietbi">
+          <End Role="trangthietbi" Type="Self.trangthietbi" Multiplicity="0..1" />
+          <End Role="chitietdanhgiatrangthietbi" Type="Self.chitietdanhgiatrangthietbi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="trangthietbi">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="chitietdanhgiatrangthietbi">
+              <PropertyRef Name="thietbima" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_chitietdieuchuyenthietbi_dieuchuyentrangthietbi">
+          <End Role="dieuchuyentrangthietbi" Type="Self.dieuchuyentrangthietbi" Multiplicity="0..1" />
+          <End Role="chitietdieuchuyenthietbi" Type="Self.chitietdieuchuyenthietbi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dieuchuyentrangthietbi">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="chitietdieuchuyenthietbi">
+              <PropertyRef Name="dondcma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_chitietdieuchuyenthietbi_tinhtrangthietbi">
+          <End Role="tinhtrangthietbi" Type="Self.tinhtrangthietbi" Multiplicity="0..1" />
+          <End Role="chitietdieuchuyenthietbi" Type="Self.chitietdieuchuyenthietbi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tinhtrangthietbi">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="chitietdieuchuyenthietbi">
+              <PropertyRef Name="danhgiama" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_chitietdieuchuyenthietbi_trangthietbi">
+          <End Role="trangthietbi" Type="Self.trangthietbi" Multiplicity="1" />
+          <End Role="chitietdieuchuyenthietbi" Type="Self.chitietdieuchuyenthietbi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="trangthietbi">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="chitietdieuchuyenthietbi">
+              <PropertyRef Name="thietbima" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_chitietsuachuathietbi_hoadonsuachua">
+          <End Role="hoadonsuachua" Type="Self.hoadonsuachua" Multiplicity="0..1" />
+          <End Role="chitietsuachuathietbi" Type="Self.chitietsuachuathietbi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hoadonsuachua">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="chitietsuachuathietbi">
+              <PropertyRef Name="hoadonma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_chitietsuachuathietbi_trangthietbi">
+          <End Role="trangthietbi" Type="Self.trangthietbi" Multiplicity="0..1" />
+          <End Role="chitietsuachuathietbi" Type="Self.chitietsuachuathietbi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="trangthietbi">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="chitietsuachuathietbi">
+              <PropertyRef Name="thietbima" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_chitiethoadonbosung_chitietcauhinh">
+          <End Role="chitietcauhinh" Type="Self.chitietcauhinh" Multiplicity="0..1" />
+          <End Role="chitiethoadonbosung" Type="Self.chitiethoadonbosung" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="chitietcauhinh">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="chitiethoadonbosung">
+              <PropertyRef Name="cauhinhma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_chitiethoadonbosung_hoadonmuabosung">
+          <End Role="hoadonmuabosung" Type="Self.hoadonmuabosung" Multiplicity="0..1" />
+          <End Role="chitiethoadonbosung" Type="Self.chitiethoadonbosung" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hoadonmuabosung">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="chitiethoadonbosung">
+              <PropertyRef Name="hoadonma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dieuchuyentrangthietbi_phongmay">
+          <End Role="phongmay" Type="Self.phongmay" Multiplicity="0..1" />
+          <End Role="dieuchuyentrangthietbi" Type="Self.dieuchuyentrangthietbi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="phongmay">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="dieuchuyentrangthietbi">
+              <PropertyRef Name="phongdima" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dieuchuyentrangthietbi_phongmay1">
+          <End Role="phongmay" Type="Self.phongmay" Multiplicity="0..1" />
+          <End Role="dieuchuyentrangthietbi" Type="Self.dieuchuyentrangthietbi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="phongmay">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="dieuchuyentrangthietbi">
+              <PropertyRef Name="phongdenma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tinhtrangthietbi_phancaptinhtrang">
+          <End Role="phancaptinhtrang" Type="Self.phancaptinhtrang" Multiplicity="0..1" />
+          <End Role="tinhtrangthietbi" Type="Self.tinhtrangthietbi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="phancaptinhtrang">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="tinhtrangthietbi">
+              <PropertyRef Name="tinhtrangma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tinhtrangthietbi_trangthietbi">
+          <End Role="trangthietbi" Type="Self.trangthietbi" Multiplicity="0..1" />
+          <End Role="tinhtrangthietbi" Type="Self.tinhtrangthietbi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="trangthietbi">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="tinhtrangthietbi">
+              <PropertyRef Name="thietbima" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_trangthietbi_chitietcauhinh1">
+          <End Role="chitietcauhinh" Type="Self.chitietcauhinh" Multiplicity="0..1" />
+          <End Role="trangthietbi" Type="Self.trangthietbi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="chitietcauhinh">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="trangthietbi">
+              <PropertyRef Name="cauhinhma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_trangthietbi_phongmay">
+          <End Role="phongmay" Type="Self.phongmay" Multiplicity="0..1" />
+          <End Role="trangthietbi" Type="Self.trangthietbi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="phongmay">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="trangthietbi">
+              <PropertyRef Name="phongmayma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="FC_DanhSachPM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="maphongmay" Type="varchar" MaxLength="20" Nullable="false" />
+                <Property Name="tenphongmay" Type="nvarchar" MaxLength="50" />
+                <Property Name="soluongbienche" Type="int" />
+                <Property Name="soluongthucte" Type="int" Nullable="false" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="FC_DIEUCHUYEN_TTB" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="ma" Type="uniqueidentifier" />
+                <Property Name="phongmayhientai" Type="varchar" MaxLength="20" />
+                <Property Name="phongmaydieuchuyen" Type="varchar" MaxLength="20" />
+                <Property Name="ngaydieuchuyen" Type="datetime" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="FC_HienThiMayTinhPhongMay" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MaPM" Type="varchar" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="MATRANGTHIETBI" Type="varchar" MaxLength="50" Nullable="false" />
+                <Property Name="TENTHIETBI" Type="nvarchar" MaxLength="50" />
+                <Property Name="VIXULY" Type="varchar" MaxLength="10" />
+                <Property Name="DIACUNG" Type="varchar" MaxLength="10" />
+                <Property Name="MANHINH" Type="varchar" MaxLength="50" />
+                <Property Name="RAM" Type="varchar" MaxLength="10" />
+                <Property Name="GHICHU" Type="nvarchar" MaxLength="100" />
+                <Property Name="TENPHONGMAY" Type="nvarchar" MaxLength="50" />
+                <Property Name="DONGIA" Type="decimal" Precision="18" Scale="0" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="FC_HienThiThietBiTheoThoiGian" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="time1" Type="datetime" Mode="In" />
+          <Parameter Name="time2" Type="datetime" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="ma" Type="varchar" MaxLength="50" Nullable="false" />
+                <Property Name="ten" Type="nvarchar" MaxLength="50" />
+                <Property Name="ram" Type="varchar" MaxLength="10" />
+                <Property Name="vixuly" Type="varchar" MaxLength="10" />
+                <Property Name="manhinh" Type="varchar" MaxLength="50" />
+                <Property Name="diacung" Type="varchar" MaxLength="10" />
+                <Property Name="dongia" Type="decimal" Precision="18" Scale="0" />
+                <Property Name="ghinhan" Type="bit" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="FC_HienThiTrangThietBiPhongMay" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MaPM" Type="varchar" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="ma" Type="varchar" MaxLength="50" Nullable="false" />
+                <Property Name="tenthietbi" Type="nvarchar" MaxLength="50" />
+                <Property Name="vixuly" Type="varchar" MaxLength="10" Nullable="false" />
+                <Property Name="diacung" Type="varchar" MaxLength="10" Nullable="false" />
+                <Property Name="manhinh" Type="varchar" MaxLength="50" Nullable="false" />
+                <Property Name="ram" Type="varchar" MaxLength="10" Nullable="false" />
+                <Property Name="ghichu" Type="nvarchar" MaxLength="100" />
+                <Property Name="tenphongmay" Type="nvarchar" MaxLength="50" />
+                <Property Name="dongia" Type="decimal" Precision="18" Scale="0" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="FC_MUCDANHGIA_GANNHAT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="mathietbi" Type="varchar" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="ma" Type="uniqueidentifier" Nullable="false" />
+                <Property Name="tenthietbi" Type="nvarchar" MaxLength="50" />
+                <Property Name="tenphongmay" Type="nvarchar" MaxLength="50" />
+                <Property Name="capchatluong" Type="varchar" MaxLength="10" />
+                <Property Name="thoigian" Type="datetime" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="fc_thongkedanhgia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ma" Type="uniqueidentifier" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="ten" Type="nvarchar" MaxLength="50" />
+                <Property Name="ma" Type="int" />
+                <Property Name="vixuly" Type="varchar" MaxLength="10" />
+                <Property Name="ram" Type="varchar" MaxLength="10" />
+                <Property Name="diacung" Type="varchar" MaxLength="10" />
+                <Property Name="manhinh" Type="varchar" MaxLength="50" />
+                <Property Name="mota" Type="nvarchar" MaxLength="100" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="FC_Thongkedieuchuyen" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ma" Type="uniqueidentifier" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="nguoidieuchuyen" Type="nvarchar" MaxLength="50" />
+                <Property Name="ngaydieuchuyen" Type="datetime" />
+                <Property Name="phongmayden" Type="varchar" MaxLength="20" />
+                <Property Name="phongmaydi" Type="varchar" MaxLength="20" />
+                <Property Name="soluong" Type="int" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="SP_Bosungthietbivaophongmay" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="phongmayma" Type="varchar" Mode="In" />
+          <Parameter Name="ma" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SP_CAPNHAT_PHONGMAY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MaPM" Type="varchar" Mode="In" />
+          <Parameter Name="ten" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_CAPNHATTHIETBISUACHUA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idctsc" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="matb" Type="varchar" Mode="In" />
+          <Parameter Name="mahoadon" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="udngaysuachua" Type="datetime" Mode="In" />
+          <Parameter Name="honghoc" Type="nvarchar" Mode="In" />
+          <Parameter Name="udnguoisuachua" Type="nvarchar" Mode="In" />
+          <Parameter Name="udghinhan" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_CAPNHATHOADONSC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idhd" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="udnguoicap" Type="nvarchar" Mode="In" />
+          <Parameter Name="udmahienthi" Type="nvarchar" Mode="In" />
+          <Parameter Name="udngaycap" Type="datetime" Mode="In" />
+          <Parameter Name="uddonvisuachua" Type="nvarchar" Mode="In" />
+          <Parameter Name="udmota" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="SP_DANHSACHTBSCTRONGHOADON" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="hoadonma" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="SP_DANHSACHTBSCTRONGNAM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="theyear" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_HIENTHI_CHITIETDGTTB" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ma" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="SP_HIENTHI_DGTB_THANHLY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_HIENTHI_PHONGMAY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_HIENTHI_THIETBI_CAUHINH" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="manhinh" Type="varchar" Mode="In" />
+          <Parameter Name="ram" Type="varchar" Mode="In" />
+          <Parameter Name="vixuly" Type="varchar" Mode="In" />
+          <Parameter Name="diacung" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SP_HienThiDanhSachCapNhatTrangThietBi" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MaTTB" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SP_HIENTHIDG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ma" Type="varchar" Mode="In" />
+          <Parameter Name="ten" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_Hienthithietbibosungtheothoigian" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="time1" Type="datetime" Mode="In" />
+          <Parameter Name="time2" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="SP_HienThiTrangThietBiPhongMay" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MaPM" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SP_INSERT_chitiethoadonbosung" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ma" Type="nvarchar" Mode="In" />
+          <Parameter Name="ten" Type="nvarchar" Mode="In" />
+          <Parameter Name="dongia" Type="decimal" Mode="In" />
+          <Parameter Name="cauhinhma" Type="int" Mode="In" />
+          <Parameter Name="hoadonma" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="SP_INSERT_hoadonmuabosung" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nguoicap" Type="nvarchar" Mode="In" />
+          <Parameter Name="ngaycap" Type="datetime" Mode="In" />
+          <Parameter Name="soluong" Type="int" Mode="In" />
+          <Parameter Name="mota" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="hienthima" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_LaychitietDieuchuyen" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_LayhoadonDieuchuyen" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_SELECT_chitiethoadonmuabosung" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ma" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="SP_SoLanCapNhatTrangThai" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MaTTB" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SP_SUACTDGTTB" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="thietbima" Type="varchar" Mode="In" />
+          <Parameter Name="capchatluong" Type="varchar" Mode="In" />
+          <Parameter Name="ketqua" Type="nvarchar" Mode="In" />
+          <Parameter Name="thoigian" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="SP_SuahoadonDieuchuyen" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ma" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="hienthima" Type="nvarchar" Mode="In" />
+          <Parameter Name="nguoidieuchuyen" Type="nvarchar" Mode="In" />
+          <Parameter Name="ngaydieuchuyen" Type="datetime" Mode="In" />
+          <Parameter Name="phongdima" Type="varchar" Mode="In" />
+          <Parameter Name="phongdenma" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SP_TimKiemTheoMaTTB" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MaTTB" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SP_THEM_PHONGMAY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ma" Type="varchar" Mode="In" />
+          <Parameter Name="ten" Type="nvarchar" Mode="In" />
+          <Parameter Name="soluong" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_THEMCTDGTTB" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="thietbima" Type="varchar" Mode="In" />
+          <Parameter Name="capchatluong" Type="varchar" Mode="In" />
+          <Parameter Name="ketqua" Type="nvarchar" Mode="In" />
+          <Parameter Name="danhgiama" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="thoigian" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="SP_THEMDGTTB" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ma" Type="nvarchar" Mode="In" />
+          <Parameter Name="nguoidanhgia" Type="nvarchar" Mode="In" />
+          <Parameter Name="ngaydanhgia" Type="datetime" Mode="In" />
+          <Parameter Name="mota" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="SP_ThemhoadonDieuchuyen" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="hienthima" Type="nvarchar" Mode="In" />
+          <Parameter Name="nguoidieuchuyen" Type="nvarchar" Mode="In" />
+          <Parameter Name="ngaydieuchuyen" Type="datetime" Mode="In" />
+          <Parameter Name="phongdima" Type="varchar" Mode="In" />
+          <Parameter Name="phongdenma" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SP_THEMMOIHOADONSC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nguoicap" Type="nvarchar" Mode="In" />
+          <Parameter Name="mahienthi" Type="nvarchar" Mode="In" />
+          <Parameter Name="ngaycap" Type="datetime" Mode="In" />
+          <Parameter Name="donvisuachua" Type="nvarchar" Mode="In" />
+          <Parameter Name="mota" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="SP_THEMMOITHIETBISUACHUA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ngaysuachua" Type="datetime" Mode="In" />
+          <Parameter Name="nguoisuachua" Type="nvarchar" Mode="In" />
+          <Parameter Name="hoadonma" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="thietbima" Type="varchar" Mode="In" />
+          <Parameter Name="chitiethong" Type="nvarchar" Mode="In" />
+          <Parameter Name="ghinhan" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_THONGKE_DGTB" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_THONGKE_DSCHITIET_THIETBISUACHUA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_THONGKE_DSDIEUCHUYENTB" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_THONGKE_DSSUACHUATHIETBI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_THONGKE_DSTTB" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_THONGKEPHANCAP_CHITIET" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_THONGKESOLUONG_MAYDC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_THONGKESOLUONG_PHUONGMAY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_THONGKESUACHUA_CHUASUA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_THONGKESUACHUA_SUATREN5" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_THONGTINTHIETBISUACHUA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_UPDATE_hoadonmuabosung" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nguoicap" Type="nvarchar" Mode="In" />
+          <Parameter Name="ngaycap" Type="datetime" Mode="In" />
+          <Parameter Name="soluong" Type="int" Mode="In" />
+          <Parameter Name="mota" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="mahienthi" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_UPDATEANDINSERT_DIEUCHUYENTHIETBI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ma" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="hienthima" Type="nvarchar" Mode="In" />
+          <Parameter Name="nguoidieuchuyen" Type="nvarchar" Mode="In" />
+          <Parameter Name="ngaydieuchuyen" Type="datetime" Mode="In" />
+          <Parameter Name="phongdima" Type="varchar" Mode="In" />
+          <Parameter Name="phongdenma" Type="varchar" Mode="In" />
+          <Parameter Name="flag" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="SP_UpdateTinhTrangThietBi" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="thietbima" Type="varchar" Mode="In" />
+          <Parameter Name="tinhtrangma" Type="int" Mode="In" />
+          <Parameter Name="ngaydanhgia" Type="date" Mode="In" />
+          <Parameter Name="nguoidanhgia" Type="nvarchar" Mode="In" />
+          <Parameter Name="mota" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="SP_XOA_PHONGMAY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ma" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SP_Xoachitietdieuchuyen" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ma" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="SP_XoahoadonDieuchuyen" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ma" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <EntityContainer Name="QLPMN2ModelStoreContainer">
+          <EntitySet Name="chitietcauhinh" EntityType="Self.chitietcauhinh" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="chitietdanhgiatrangthietbi" EntityType="Self.chitietdanhgiatrangthietbi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="chitietdieuchuyenthietbi" EntityType="Self.chitietdieuchuyenthietbi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="chitietsuachuathietbi" EntityType="Self.chitietsuachuathietbi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="chitiethoadonbosung" EntityType="Self.chitiethoadonbosung" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="danhgiatrangthietbi" EntityType="Self.danhgiatrangthietbi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="dieuchuyentrangthietbi" EntityType="Self.dieuchuyentrangthietbi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="hoadonmuabosung" EntityType="Self.hoadonmuabosung" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="hoadonsuachua" EntityType="Self.hoadonsuachua" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="phancaptinhtrang" EntityType="Self.phancaptinhtrang" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="phongmay" EntityType="Self.phongmay" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tinhtrangthietbi" EntityType="Self.tinhtrangthietbi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="trangthietbi" EntityType="Self.trangthietbi" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_chitietdanhgiatrangthietbi_danhgiatrangthietbi" Association="Self.FK_chitietdanhgiatrangthietbi_danhgiatrangthietbi">
+            <End Role="danhgiatrangthietbi" EntitySet="danhgiatrangthietbi" />
+            <End Role="chitietdanhgiatrangthietbi" EntitySet="chitietdanhgiatrangthietbi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_chitietdanhgiatrangthietbi_trangthietbi" Association="Self.FK_chitietdanhgiatrangthietbi_trangthietbi">
+            <End Role="trangthietbi" EntitySet="trangthietbi" />
+            <End Role="chitietdanhgiatrangthietbi" EntitySet="chitietdanhgiatrangthietbi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_chitietdieuchuyenthietbi_dieuchuyentrangthietbi" Association="Self.FK_chitietdieuchuyenthietbi_dieuchuyentrangthietbi">
+            <End Role="dieuchuyentrangthietbi" EntitySet="dieuchuyentrangthietbi" />
+            <End Role="chitietdieuchuyenthietbi" EntitySet="chitietdieuchuyenthietbi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_chitietdieuchuyenthietbi_tinhtrangthietbi" Association="Self.FK_chitietdieuchuyenthietbi_tinhtrangthietbi">
+            <End Role="tinhtrangthietbi" EntitySet="tinhtrangthietbi" />
+            <End Role="chitietdieuchuyenthietbi" EntitySet="chitietdieuchuyenthietbi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_chitietdieuchuyenthietbi_trangthietbi" Association="Self.FK_chitietdieuchuyenthietbi_trangthietbi">
+            <End Role="trangthietbi" EntitySet="trangthietbi" />
+            <End Role="chitietdieuchuyenthietbi" EntitySet="chitietdieuchuyenthietbi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_chitietsuachuathietbi_hoadonsuachua" Association="Self.FK_chitietsuachuathietbi_hoadonsuachua">
+            <End Role="hoadonsuachua" EntitySet="hoadonsuachua" />
+            <End Role="chitietsuachuathietbi" EntitySet="chitietsuachuathietbi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_chitietsuachuathietbi_trangthietbi" Association="Self.FK_chitietsuachuathietbi_trangthietbi">
+            <End Role="trangthietbi" EntitySet="trangthietbi" />
+            <End Role="chitietsuachuathietbi" EntitySet="chitietsuachuathietbi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_chitiethoadonbosung_chitietcauhinh" Association="Self.FK_chitiethoadonbosung_chitietcauhinh">
+            <End Role="chitietcauhinh" EntitySet="chitietcauhinh" />
+            <End Role="chitiethoadonbosung" EntitySet="chitiethoadonbosung" />
+          </AssociationSet>
+          <AssociationSet Name="FK_chitiethoadonbosung_hoadonmuabosung" Association="Self.FK_chitiethoadonbosung_hoadonmuabosung">
+            <End Role="hoadonmuabosung" EntitySet="hoadonmuabosung" />
+            <End Role="chitiethoadonbosung" EntitySet="chitiethoadonbosung" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dieuchuyentrangthietbi_phongmay" Association="Self.FK_dieuchuyentrangthietbi_phongmay">
+            <End Role="phongmay" EntitySet="phongmay" />
+            <End Role="dieuchuyentrangthietbi" EntitySet="dieuchuyentrangthietbi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dieuchuyentrangthietbi_phongmay1" Association="Self.FK_dieuchuyentrangthietbi_phongmay1">
+            <End Role="phongmay" EntitySet="phongmay" />
+            <End Role="dieuchuyentrangthietbi" EntitySet="dieuchuyentrangthietbi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tinhtrangthietbi_phancaptinhtrang" Association="Self.FK_tinhtrangthietbi_phancaptinhtrang">
+            <End Role="phancaptinhtrang" EntitySet="phancaptinhtrang" />
+            <End Role="tinhtrangthietbi" EntitySet="tinhtrangthietbi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tinhtrangthietbi_trangthietbi" Association="Self.FK_tinhtrangthietbi_trangthietbi">
+            <End Role="trangthietbi" EntitySet="trangthietbi" />
+            <End Role="tinhtrangthietbi" EntitySet="tinhtrangthietbi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_trangthietbi_chitietcauhinh1" Association="Self.FK_trangthietbi_chitietcauhinh1">
+            <End Role="chitietcauhinh" EntitySet="chitietcauhinh" />
+            <End Role="trangthietbi" EntitySet="trangthietbi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_trangthietbi_phongmay" Association="Self.FK_trangthietbi_phongmay">
+            <End Role="phongmay" EntitySet="phongmay" />
+            <End Role="trangthietbi" EntitySet="trangthietbi" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QLPMN2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <ComplexType Name="FC_DanhSachPM_Result">
+          <Property Name="maphongmay" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tenphongmay" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="soluongbienche" Type="Int32" />
+          <Property Name="soluongthucte" Type="Int32" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="FC_DIEUCHUYEN_TTB_Result">
+          <Property Name="ma" Type="Guid" />
+          <Property Name="phongmayhientai" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="phongmaydieuchuyen" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ngaydieuchuyen" Type="DateTime" />
+        </ComplexType>
+        <ComplexType Name="FC_HienThiMayTinhPhongMay_Result">
+          <Property Name="MATRANGTHIETBI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TENTHIETBI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VIXULY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="DIACUNG" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="MANHINH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RAM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="GHICHU" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TENPHONGMAY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DONGIA" Type="Decimal" Precision="18" Scale="0" />
+        </ComplexType>
+        <ComplexType Name="FC_HienThiThietBiTheoThoiGian_Result">
+          <Property Name="ma" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ram" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="vixuly" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="manhinh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="diacung" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="dongia" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ghinhan" Type="Boolean" />
+        </ComplexType>
+        <ComplexType Name="FC_HienThiTrangThietBiPhongMay_Result">
+          <Property Name="ma" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tenthietbi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="vixuly" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="diacung" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="manhinh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ram" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ghichu" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="tenphongmay" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="dongia" Type="Decimal" Precision="18" Scale="0" />
+        </ComplexType>
+        <ComplexType Name="FC_MUCDANHGIA_GANNHAT_Result">
+          <Property Name="ma" Type="Guid" Nullable="false" />
+          <Property Name="tenthietbi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tenphongmay" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="capchatluong" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="thoigian" Type="DateTime" />
+        </ComplexType>
+        <ComplexType Name="fc_thongkedanhgia_Result">
+          <Property Name="ten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ma" Type="Int32" />
+          <Property Name="vixuly" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ram" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="diacung" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="manhinh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="mota" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </ComplexType>
+        <ComplexType Name="FC_Thongkedieuchuyen_Result">
+          <Property Name="nguoidieuchuyen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ngaydieuchuyen" Type="DateTime" />
+          <Property Name="phongmayden" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="phongmaydi" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="soluong" Type="Int32" />
+        </ComplexType>
+        <EntityType Name="chitietcauhinh">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="Int32" Nullable="false" />
+          <Property Name="vixuly" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ram" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="diacung" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="manhinh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="mota" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="chitiethoadonbosung" Relationship="Self.FK_chitiethoadonbosung_chitietcauhinh" FromRole="chitietcauhinh" ToRole="chitiethoadonbosung" />
+          <NavigationProperty Name="trangthietbi" Relationship="Self.FK_trangthietbi_chitietcauhinh1" FromRole="chitietcauhinh" ToRole="trangthietbi" />
+        </EntityType>
+        <EntityType Name="chitietdanhgiatrangthietbi">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="Guid" Nullable="false" />
+          <Property Name="thietbima" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="danhgiama" Type="Guid" />
+          <Property Name="capchatluong" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ketqua" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="thoigian" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="danhgiatrangthietbi" Relationship="Self.FK_chitietdanhgiatrangthietbi_danhgiatrangthietbi" FromRole="chitietdanhgiatrangthietbi" ToRole="danhgiatrangthietbi" />
+          <NavigationProperty Name="trangthietbi" Relationship="Self.FK_chitietdanhgiatrangthietbi_trangthietbi" FromRole="chitietdanhgiatrangthietbi" ToRole="trangthietbi" />
+        </EntityType>
+        <EntityType Name="chitietdieuchuyenthietbi">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="Guid" Nullable="false" />
+          <Property Name="thietbima" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="dondcma" Type="Guid" />
+          <Property Name="danhgiama" Type="Guid" />
+          <Property Name="ngaydieuchuyen" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="dieuchuyentrangthietbi" Relationship="Self.FK_chitietdieuchuyenthietbi_dieuchuyentrangthietbi" FromRole="chitietdieuchuyenthietbi" ToRole="dieuchuyentrangthietbi" />
+          <NavigationProperty Name="tinhtrangthietbi" Relationship="Self.FK_chitietdieuchuyenthietbi_tinhtrangthietbi" FromRole="chitietdieuchuyenthietbi" ToRole="tinhtrangthietbi" />
+          <NavigationProperty Name="trangthietbi" Relationship="Self.FK_chitietdieuchuyenthietbi_trangthietbi" FromRole="chitietdieuchuyenthietbi" ToRole="trangthietbi" />
+        </EntityType>
+        <EntityType Name="chitietsuachuathietbi">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="Guid" Nullable="false" />
+          <Property Name="hoadonma" Type="Guid" />
+          <Property Name="thietbima" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ngaysuachua" Type="DateTime" Precision="3" />
+          <Property Name="chitiethonghoc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="nguoisuachua" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ghinhan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="hoadonsuachua" Relationship="Self.FK_chitietsuachuathietbi_hoadonsuachua" FromRole="chitietsuachuathietbi" ToRole="hoadonsuachua" />
+          <NavigationProperty Name="trangthietbi" Relationship="Self.FK_chitietsuachuathietbi_trangthietbi" FromRole="chitietsuachuathietbi" ToRole="trangthietbi" />
+        </EntityType>
+        <EntityType Name="chitiethoadonbosung">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="dongia" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="cauhinhma" Type="Int32" />
+          <Property Name="hoadonma" Type="Guid" />
+          <Property Name="ghinhan" Type="Boolean" />
+          <NavigationProperty Name="chitietcauhinh" Relationship="Self.FK_chitiethoadonbosung_chitietcauhinh" FromRole="chitiethoadonbosung" ToRole="chitietcauhinh" />
+          <NavigationProperty Name="hoadonmuabosung" Relationship="Self.FK_chitiethoadonbosung_hoadonmuabosung" FromRole="chitiethoadonbosung" ToRole="hoadonmuabosung" />
+        </EntityType>
+        <EntityType Name="danhgiatrangthietbi">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="Guid" Nullable="false" />
+          <Property Name="hienthima" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="nguoidanhgia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ngaydanhgia" Type="DateTime" Precision="3" />
+          <Property Name="mota" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="chitietdanhgiatrangthietbi" Relationship="Self.FK_chitietdanhgiatrangthietbi_danhgiatrangthietbi" FromRole="danhgiatrangthietbi" ToRole="chitietdanhgiatrangthietbi" />
+        </EntityType>
+        <EntityType Name="dieuchuyentrangthietbi">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="Guid" Nullable="false" />
+          <Property Name="hienthima" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="nguoidieuchuyen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ngaydieuchuyen" Type="DateTime" Precision="3" />
+          <Property Name="phongdima" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="phongdenma" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="chitietdieuchuyenthietbi" Relationship="Self.FK_chitietdieuchuyenthietbi_dieuchuyentrangthietbi" FromRole="dieuchuyentrangthietbi" ToRole="chitietdieuchuyenthietbi" />
+          <NavigationProperty Name="phongmay" Relationship="Self.FK_dieuchuyentrangthietbi_phongmay" FromRole="dieuchuyentrangthietbi" ToRole="phongmay" />
+          <NavigationProperty Name="phongmay1" Relationship="Self.FK_dieuchuyentrangthietbi_phongmay1" FromRole="dieuchuyentrangthietbi" ToRole="phongmay" />
+        </EntityType>
+        <EntityType Name="hoadonmuabosung">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="Guid" Nullable="false" />
+          <Property Name="hienthima" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="nguoicap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ngaycap" Type="DateTime" Precision="3" />
+          <Property Name="soluong" Type="Int32" />
+          <Property Name="mota" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="chitiethoadonbosung" Relationship="Self.FK_chitiethoadonbosung_hoadonmuabosung" FromRole="hoadonmuabosung" ToRole="chitiethoadonbosung" />
+        </EntityType>
+        <EntityType Name="hoadonsuachua">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="Guid" Nullable="false" />
+          <Property Name="hienthima" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="nguoicap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ngaycap" Type="DateTime" Precision="3" />
+          <Property Name="donvisuachua" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mota" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="chitietsuachuathietbi" Relationship="Self.FK_chitietsuachuathietbi_hoadonsuachua" FromRole="hoadonsuachua" ToRole="chitietsuachuathietbi" />
+        </EntityType>
+        <EntityType Name="phancaptinhtrang">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="Int32" Nullable="false" />
+          <Property Name="tinhtrang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tinhtrangthietbi" Relationship="Self.FK_tinhtrangthietbi_phancaptinhtrang" FromRole="phancaptinhtrang" ToRole="tinhtrangthietbi" />
+        </EntityType>
+        <EntityType Name="phongmay">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="soluongbienche" Type="Int32" />
+          <Property Name="soluongthucte" Type="Int32" />
+          <NavigationProperty Name="dieuchuyentrangthietbi" Relationship="Self.FK_dieuchuyentrangthietbi_phongmay" FromRole="phongmay" ToRole="dieuchuyentrangthietbi" />
+          <NavigationProperty Name="dieuchuyentrangthietbi1" Relationship="Self.FK_dieuchuyentrangthietbi_phongmay1" FromRole="phongmay" ToRole="dieuchuyentrangthietbi" />
+          <NavigationProperty Name="trangthietbi" Relationship="Self.FK_trangthietbi_phongmay" FromRole="phongmay" ToRole="trangthietbi" />
+        </EntityType>
+        <EntityType Name="tinhtrangthietbi">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="Guid" Nullable="false" />
+          <Property Name="thietbima" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="tinhtrangma" Type="Int32" />
+          <Property Name="nguoidanhgia" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ngaydanhgia" Type="DateTime" Precision="0" />
+          <Property Name="mota" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="chitietdieuchuyenthietbi" Relationship="Self.FK_chitietdieuchuyenthietbi_tinhtrangthietbi" FromRole="tinhtrangthietbi" ToRole="chitietdieuchuyenthietbi" />
+          <NavigationProperty Name="phancaptinhtrang" Relationship="Self.FK_tinhtrangthietbi_phancaptinhtrang" FromRole="tinhtrangthietbi" ToRole="phancaptinhtrang" />
+          <NavigationProperty Name="trangthietbi" Relationship="Self.FK_tinhtrangthietbi_trangthietbi" FromRole="tinhtrangthietbi" ToRole="trangthietbi" />
+        </EntityType>
+        <EntityType Name="trangthietbi">
+          <Key>
+            <PropertyRef Name="ma" />
+          </Key>
+          <Property Name="ma" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="dongia" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ghichu" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="cauhinhma" Type="Int32" />
+          <Property Name="phongmayma" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="chitietcauhinh" Relationship="Self.FK_trangthietbi_chitietcauhinh1" FromRole="trangthietbi" ToRole="chitietcauhinh" />
+          <NavigationProperty Name="chitietdanhgiatrangthietbi" Relationship="Self.FK_chitietdanhgiatrangthietbi_trangthietbi" FromRole="trangthietbi" ToRole="chitietdanhgiatrangthietbi" />
+          <NavigationProperty Name="chitietdieuchuyenthietbi" Relationship="Self.FK_chitietdieuchuyenthietbi_trangthietbi" FromRole="trangthietbi" ToRole="chitietdieuchuyenthietbi" />
+          <NavigationProperty Name="chitietsuachuathietbi" Relationship="Self.FK_chitietsuachuathietbi_trangthietbi" FromRole="trangthietbi" ToRole="chitietsuachuathietbi" />
+          <NavigationProperty Name="phongmay" Relationship="Self.FK_trangthietbi_phongmay" FromRole="trangthietbi" ToRole="phongmay" />
+          <NavigationProperty Name="tinhtrangthietbi" Relationship="Self.FK_tinhtrangthietbi_trangthietbi" FromRole="trangthietbi" ToRole="tinhtrangthietbi" />
+        </EntityType>
+        <Association Name="FK_chitiethoadonbosung_chitietcauhinh">
+          <End Role="chitietcauhinh" Type="Self.chitietcauhinh" Multiplicity="0..1" />
+          <End Role="chitiethoadonbosung" Type="Self.chitiethoadonbosung" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="chitietcauhinh">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="chitiethoadonbosung">
+              <PropertyRef Name="cauhinhma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_trangthietbi_chitietcauhinh1">
+          <End Role="chitietcauhinh" Type="Self.chitietcauhinh" Multiplicity="0..1" />
+          <End Role="trangthietbi" Type="Self.trangthietbi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="chitietcauhinh">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="trangthietbi">
+              <PropertyRef Name="cauhinhma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_chitietdanhgiatrangthietbi_danhgiatrangthietbi">
+          <End Role="danhgiatrangthietbi" Type="Self.danhgiatrangthietbi" Multiplicity="0..1" />
+          <End Role="chitietdanhgiatrangthietbi" Type="Self.chitietdanhgiatrangthietbi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="danhgiatrangthietbi">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="chitietdanhgiatrangthietbi">
+              <PropertyRef Name="danhgiama" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_chitietdanhgiatrangthietbi_trangthietbi">
+          <End Role="trangthietbi" Type="Self.trangthietbi" Multiplicity="0..1" />
+          <End Role="chitietdanhgiatrangthietbi" Type="Self.chitietdanhgiatrangthietbi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="trangthietbi">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="chitietdanhgiatrangthietbi">
+              <PropertyRef Name="thietbima" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_chitietdieuchuyenthietbi_dieuchuyentrangthietbi">
+          <End Role="dieuchuyentrangthietbi" Type="Self.dieuchuyentrangthietbi" Multiplicity="0..1" />
+          <End Role="chitietdieuchuyenthietbi" Type="Self.chitietdieuchuyenthietbi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dieuchuyentrangthietbi">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="chitietdieuchuyenthietbi">
+              <PropertyRef Name="dondcma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_chitietdieuchuyenthietbi_tinhtrangthietbi">
+          <End Role="tinhtrangthietbi" Type="Self.tinhtrangthietbi" Multiplicity="0..1" />
+          <End Role="chitietdieuchuyenthietbi" Type="Self.chitietdieuchuyenthietbi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tinhtrangthietbi">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="chitietdieuchuyenthietbi">
+              <PropertyRef Name="danhgiama" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_chitietdieuchuyenthietbi_trangthietbi">
+          <End Role="trangthietbi" Type="Self.trangthietbi" Multiplicity="1" />
+          <End Role="chitietdieuchuyenthietbi" Type="Self.chitietdieuchuyenthietbi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="trangthietbi">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="chitietdieuchuyenthietbi">
+              <PropertyRef Name="thietbima" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_chitietsuachuathietbi_hoadonsuachua">
+          <End Role="hoadonsuachua" Type="Self.hoadonsuachua" Multiplicity="0..1" />
+          <End Role="chitietsuachuathietbi" Type="Self.chitietsuachuathietbi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hoadonsuachua">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="chitietsuachuathietbi">
+              <PropertyRef Name="hoadonma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_chitietsuachuathietbi_trangthietbi">
+          <End Role="trangthietbi" Type="Self.trangthietbi" Multiplicity="0..1" />
+          <End Role="chitietsuachuathietbi" Type="Self.chitietsuachuathietbi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="trangthietbi">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="chitietsuachuathietbi">
+              <PropertyRef Name="thietbima" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_chitiethoadonbosung_hoadonmuabosung">
+          <End Role="hoadonmuabosung" Type="Self.hoadonmuabosung" Multiplicity="0..1" />
+          <End Role="chitiethoadonbosung" Type="Self.chitiethoadonbosung" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hoadonmuabosung">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="chitiethoadonbosung">
+              <PropertyRef Name="hoadonma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dieuchuyentrangthietbi_phongmay">
+          <End Role="phongmay" Type="Self.phongmay" Multiplicity="0..1" />
+          <End Role="dieuchuyentrangthietbi" Type="Self.dieuchuyentrangthietbi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="phongmay">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="dieuchuyentrangthietbi">
+              <PropertyRef Name="phongdima" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dieuchuyentrangthietbi_phongmay1">
+          <End Role="phongmay" Type="Self.phongmay" Multiplicity="0..1" />
+          <End Role="dieuchuyentrangthietbi" Type="Self.dieuchuyentrangthietbi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="phongmay">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="dieuchuyentrangthietbi">
+              <PropertyRef Name="phongdenma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tinhtrangthietbi_phancaptinhtrang">
+          <End Role="phancaptinhtrang" Type="Self.phancaptinhtrang" Multiplicity="0..1" />
+          <End Role="tinhtrangthietbi" Type="Self.tinhtrangthietbi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="phancaptinhtrang">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="tinhtrangthietbi">
+              <PropertyRef Name="tinhtrangma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_trangthietbi_phongmay">
+          <End Role="phongmay" Type="Self.phongmay" Multiplicity="0..1" />
+          <End Role="trangthietbi" Type="Self.trangthietbi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="phongmay">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="trangthietbi">
+              <PropertyRef Name="phongmayma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tinhtrangthietbi_trangthietbi">
+          <End Role="trangthietbi" Type="Self.trangthietbi" Multiplicity="0..1" />
+          <End Role="tinhtrangthietbi" Type="Self.tinhtrangthietbi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="trangthietbi">
+              <PropertyRef Name="ma" />
+            </Principal>
+            <Dependent Role="tinhtrangthietbi">
+              <PropertyRef Name="thietbima" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QLPMN2Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="chitietcauhinh" EntityType="Self.chitietcauhinh" />
+          <EntitySet Name="chitietdanhgiatrangthietbi" EntityType="Self.chitietdanhgiatrangthietbi" />
+          <EntitySet Name="chitietdieuchuyenthietbi" EntityType="Self.chitietdieuchuyenthietbi" />
+          <EntitySet Name="chitietsuachuathietbi" EntityType="Self.chitietsuachuathietbi" />
+          <EntitySet Name="chitiethoadonbosung" EntityType="Self.chitiethoadonbosung" />
+          <EntitySet Name="danhgiatrangthietbi" EntityType="Self.danhgiatrangthietbi" />
+          <EntitySet Name="dieuchuyentrangthietbi" EntityType="Self.dieuchuyentrangthietbi" />
+          <EntitySet Name="hoadonmuabosung" EntityType="Self.hoadonmuabosung" />
+          <EntitySet Name="hoadonsuachua" EntityType="Self.hoadonsuachua" />
+          <EntitySet Name="phancaptinhtrang" EntityType="Self.phancaptinhtrang" />
+          <EntitySet Name="phongmay" EntityType="Self.phongmay" />
+          <EntitySet Name="tinhtrangthietbi" EntityType="Self.tinhtrangthietbi" />
+          <EntitySet Name="trangthietbi" EntityType="Self.trangthietbi" />
+          <AssociationSet Name="FK_chitiethoadonbosung_chitietcauhinh" Association="Self.FK_chitiethoadonbosung_chitietcauhinh">
+            <End Role="chitietcauhinh" EntitySet="chitietcauhinh" />
+            <End Role="chitiethoadonbosung" EntitySet="chitiethoadonbosung" />
+          </AssociationSet>
+          <AssociationSet Name="FK_trangthietbi_chitietcauhinh1" Association="Self.FK_trangthietbi_chitietcauhinh1">
+            <End Role="chitietcauhinh" EntitySet="chitietcauhinh" />
+            <End Role="trangthietbi" EntitySet="trangthietbi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_chitietdanhgiatrangthietbi_danhgiatrangthietbi" Association="Self.FK_chitietdanhgiatrangthietbi_danhgiatrangthietbi">
+            <End Role="danhgiatrangthietbi" EntitySet="danhgiatrangthietbi" />
+            <End Role="chitietdanhgiatrangthietbi" EntitySet="chitietdanhgiatrangthietbi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_chitietdanhgiatrangthietbi_trangthietbi" Association="Self.FK_chitietdanhgiatrangthietbi_trangthietbi">
+            <End Role="trangthietbi" EntitySet="trangthietbi" />
+            <End Role="chitietdanhgiatrangthietbi" EntitySet="chitietdanhgiatrangthietbi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_chitietdieuchuyenthietbi_dieuchuyentrangthietbi" Association="Self.FK_chitietdieuchuyenthietbi_dieuchuyentrangthietbi">
+            <End Role="dieuchuyentrangthietbi" EntitySet="dieuchuyentrangthietbi" />
+            <End Role="chitietdieuchuyenthietbi" EntitySet="chitietdieuchuyenthietbi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_chitietdieuchuyenthietbi_tinhtrangthietbi" Association="Self.FK_chitietdieuchuyenthietbi_tinhtrangthietbi">
+            <End Role="tinhtrangthietbi" EntitySet="tinhtrangthietbi" />
+            <End Role="chitietdieuchuyenthietbi" EntitySet="chitietdieuchuyenthietbi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_chitietdieuchuyenthietbi_trangthietbi" Association="Self.FK_chitietdieuchuyenthietbi_trangthietbi">
+            <End Role="trangthietbi" EntitySet="trangthietbi" />
+            <End Role="chitietdieuchuyenthietbi" EntitySet="chitietdieuchuyenthietbi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_chitietsuachuathietbi_hoadonsuachua" Association="Self.FK_chitietsuachuathietbi_hoadonsuachua">
+            <End Role="hoadonsuachua" EntitySet="hoadonsuachua" />
+            <End Role="chitietsuachuathietbi" EntitySet="chitietsuachuathietbi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_chitietsuachuathietbi_trangthietbi" Association="Self.FK_chitietsuachuathietbi_trangthietbi">
+            <End Role="trangthietbi" EntitySet="trangthietbi" />
+            <End Role="chitietsuachuathietbi" EntitySet="chitietsuachuathietbi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_chitiethoadonbosung_hoadonmuabosung" Association="Self.FK_chitiethoadonbosung_hoadonmuabosung">
+            <End Role="hoadonmuabosung" EntitySet="hoadonmuabosung" />
+            <End Role="chitiethoadonbosung" EntitySet="chitiethoadonbosung" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dieuchuyentrangthietbi_phongmay" Association="Self.FK_dieuchuyentrangthietbi_phongmay">
+            <End Role="phongmay" EntitySet="phongmay" />
+            <End Role="dieuchuyentrangthietbi" EntitySet="dieuchuyentrangthietbi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dieuchuyentrangthietbi_phongmay1" Association="Self.FK_dieuchuyentrangthietbi_phongmay1">
+            <End Role="phongmay" EntitySet="phongmay" />
+            <End Role="dieuchuyentrangthietbi" EntitySet="dieuchuyentrangthietbi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tinhtrangthietbi_phancaptinhtrang" Association="Self.FK_tinhtrangthietbi_phancaptinhtrang">
+            <End Role="phancaptinhtrang" EntitySet="phancaptinhtrang" />
+            <End Role="tinhtrangthietbi" EntitySet="tinhtrangthietbi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_trangthietbi_phongmay" Association="Self.FK_trangthietbi_phongmay">
+            <End Role="phongmay" EntitySet="phongmay" />
+            <End Role="trangthietbi" EntitySet="trangthietbi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tinhtrangthietbi_trangthietbi" Association="Self.FK_tinhtrangthietbi_trangthietbi">
+            <End Role="trangthietbi" EntitySet="trangthietbi" />
+            <End Role="tinhtrangthietbi" EntitySet="tinhtrangthietbi" />
+          </AssociationSet>
+          <FunctionImport Name="FC_DanhSachPM" IsComposable="true" ReturnType="Collection(QLPMN2Model.FC_DanhSachPM_Result)" />
+          <FunctionImport Name="FC_DIEUCHUYEN_TTB" IsComposable="true" ReturnType="Collection(QLPMN2Model.FC_DIEUCHUYEN_TTB_Result)" />
+          <FunctionImport Name="FC_HienThiMayTinhPhongMay" IsComposable="true" ReturnType="Collection(QLPMN2Model.FC_HienThiMayTinhPhongMay_Result)">
+            <Parameter Name="MaPM" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="FC_HienThiThietBiTheoThoiGian" IsComposable="true" ReturnType="Collection(QLPMN2Model.FC_HienThiThietBiTheoThoiGian_Result)">
+            <Parameter Name="time1" Mode="In" Type="DateTime" />
+            <Parameter Name="time2" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="FC_HienThiTrangThietBiPhongMay" IsComposable="true" ReturnType="Collection(QLPMN2Model.FC_HienThiTrangThietBiPhongMay_Result)">
+            <Parameter Name="MaPM" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="FC_MUCDANHGIA_GANNHAT" IsComposable="true" ReturnType="Collection(QLPMN2Model.FC_MUCDANHGIA_GANNHAT_Result)">
+            <Parameter Name="mathietbi" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="fc_thongkedanhgia" IsComposable="true" ReturnType="Collection(QLPMN2Model.fc_thongkedanhgia_Result)">
+            <Parameter Name="ma" Mode="In" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="FC_Thongkedieuchuyen" IsComposable="true" ReturnType="Collection(QLPMN2Model.FC_Thongkedieuchuyen_Result)">
+            <Parameter Name="ma" Mode="In" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Bosungthietbivaophongmay">
+            <Parameter Name="phongmayma" Mode="In" Type="String" />
+            <Parameter Name="ma" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_CAPNHAT_PHONGMAY">
+            <Parameter Name="MaPM" Mode="In" Type="String" />
+            <Parameter Name="ten" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_CAPNHATTHIETBISUACHUA">
+            <Parameter Name="idctsc" Mode="In" Type="Guid" />
+            <Parameter Name="matb" Mode="In" Type="String" />
+            <Parameter Name="mahoadon" Mode="In" Type="Guid" />
+            <Parameter Name="udngaysuachua" Mode="In" Type="DateTime" />
+            <Parameter Name="honghoc" Mode="In" Type="String" />
+            <Parameter Name="udnguoisuachua" Mode="In" Type="String" />
+            <Parameter Name="udghinhan" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_CAPNHATHOADONSC">
+            <Parameter Name="idhd" Mode="In" Type="Guid" />
+            <Parameter Name="udnguoicap" Mode="In" Type="String" />
+            <Parameter Name="udmahienthi" Mode="In" Type="String" />
+            <Parameter Name="udngaycap" Mode="In" Type="DateTime" />
+            <Parameter Name="uddonvisuachua" Mode="In" Type="String" />
+            <Parameter Name="udmota" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_DANHSACHTBSCTRONGHOADON" ReturnType="Collection(QLPMN2Model.SP_DANHSACHTBSCTRONGHOADON_Result)">
+            <Parameter Name="hoadonma" Mode="In" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="SP_DANHSACHTBSCTRONGNAM" ReturnType="Collection(QLPMN2Model.SP_DANHSACHTBSCTRONGNAM_Result)">
+            <Parameter Name="theyear" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_HIENTHI_CHITIETDGTTB" ReturnType="Collection(QLPMN2Model.SP_HIENTHI_CHITIETDGTTB_Result)">
+            <Parameter Name="ma" Mode="In" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="SP_HIENTHI_DGTB_THANHLY" ReturnType="Collection(QLPMN2Model.SP_HIENTHI_DGTB_THANHLY_Result)" />
+          <FunctionImport Name="SP_HIENTHI_PHONGMAY" ReturnType="Collection(QLPMN2Model.SP_HIENTHI_PHONGMAY_Result)" />
+          <FunctionImport Name="SP_HIENTHI_THIETBI_CAUHINH" ReturnType="Collection(QLPMN2Model.SP_HIENTHI_THIETBI_CAUHINH_Result)">
+            <Parameter Name="manhinh" Mode="In" Type="String" />
+            <Parameter Name="ram" Mode="In" Type="String" />
+            <Parameter Name="vixuly" Mode="In" Type="String" />
+            <Parameter Name="diacung" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_HienThiDanhSachCapNhatTrangThietBi" ReturnType="Collection(QLPMN2Model.SP_HienThiDanhSachCapNhatTrangThietBi_Result)">
+            <Parameter Name="MaTTB" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_HIENTHIDG" ReturnType="Collection(QLPMN2Model.SP_HIENTHIDG_Result)">
+            <Parameter Name="ma" Mode="In" Type="String" />
+            <Parameter Name="ten" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Hienthithietbibosungtheothoigian" ReturnType="Collection(QLPMN2Model.SP_Hienthithietbibosungtheothoigian_Result)">
+            <Parameter Name="time1" Mode="In" Type="DateTime" />
+            <Parameter Name="time2" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="SP_HienThiTrangThietBiPhongMay" ReturnType="Collection(QLPMN2Model.SP_HienThiTrangThietBiPhongMay_Result)">
+            <Parameter Name="MaPM" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_INSERT_chitiethoadonbosung">
+            <Parameter Name="ma" Mode="In" Type="String" />
+            <Parameter Name="ten" Mode="In" Type="String" />
+            <Parameter Name="dongia" Mode="In" Type="Decimal" />
+            <Parameter Name="cauhinhma" Mode="In" Type="Int32" />
+            <Parameter Name="hoadonma" Mode="In" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="SP_INSERT_hoadonmuabosung">
+            <Parameter Name="nguoicap" Mode="In" Type="String" />
+            <Parameter Name="ngaycap" Mode="In" Type="DateTime" />
+            <Parameter Name="soluong" Mode="In" Type="Int32" />
+            <Parameter Name="mota" Mode="In" Type="String" />
+            <Parameter Name="hienthima" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_LaychitietDieuchuyen" ReturnType="Collection(QLPMN2Model.SP_LaychitietDieuchuyen_Result)" />
+          <FunctionImport Name="SP_LayhoadonDieuchuyen" ReturnType="Collection(QLPMN2Model.SP_LayhoadonDieuchuyen_Result)" />
+          <FunctionImport Name="SP_SELECT_chitiethoadonmuabosung" ReturnType="Collection(QLPMN2Model.SP_SELECT_chitiethoadonmuabosung_Result)">
+            <Parameter Name="ma" Mode="In" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="SP_SoLanCapNhatTrangThai" ReturnType="Collection(Int32)">
+            <Parameter Name="MaTTB" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_SUACTDGTTB">
+            <Parameter Name="thietbima" Mode="In" Type="String" />
+            <Parameter Name="capchatluong" Mode="In" Type="String" />
+            <Parameter Name="ketqua" Mode="In" Type="String" />
+            <Parameter Name="thoigian" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="SP_SuahoadonDieuchuyen">
+            <Parameter Name="ma" Mode="In" Type="Guid" />
+            <Parameter Name="hienthima" Mode="In" Type="String" />
+            <Parameter Name="nguoidieuchuyen" Mode="In" Type="String" />
+            <Parameter Name="ngaydieuchuyen" Mode="In" Type="DateTime" />
+            <Parameter Name="phongdima" Mode="In" Type="String" />
+            <Parameter Name="phongdenma" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_TimKiemTheoMaTTB" ReturnType="Collection(QLPMN2Model.SP_TimKiemTheoMaTTB_Result)">
+            <Parameter Name="MaTTB" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_THEM_PHONGMAY">
+            <Parameter Name="ma" Mode="In" Type="String" />
+            <Parameter Name="ten" Mode="In" Type="String" />
+            <Parameter Name="soluong" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_THEMCTDGTTB">
+            <Parameter Name="thietbima" Mode="In" Type="String" />
+            <Parameter Name="capchatluong" Mode="In" Type="String" />
+            <Parameter Name="ketqua" Mode="In" Type="String" />
+            <Parameter Name="danhgiama" Mode="In" Type="Guid" />
+            <Parameter Name="thoigian" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="SP_THEMDGTTB">
+            <Parameter Name="ma" Mode="In" Type="String" />
+            <Parameter Name="nguoidanhgia" Mode="In" Type="String" />
+            <Parameter Name="ngaydanhgia" Mode="In" Type="DateTime" />
+            <Parameter Name="mota" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_ThemhoadonDieuchuyen">
+            <Parameter Name="hienthima" Mode="In" Type="String" />
+            <Parameter Name="nguoidieuchuyen" Mode="In" Type="String" />
+            <Parameter Name="ngaydieuchuyen" Mode="In" Type="DateTime" />
+            <Parameter Name="phongdima" Mode="In" Type="String" />
+            <Parameter Name="phongdenma" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_THEMMOIHOADONSC">
+            <Parameter Name="nguoicap" Mode="In" Type="String" />
+            <Parameter Name="mahienthi" Mode="In" Type="String" />
+            <Parameter Name="ngaycap" Mode="In" Type="DateTime" />
+            <Parameter Name="donvisuachua" Mode="In" Type="String" />
+            <Parameter Name="mota" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_THEMMOITHIETBISUACHUA">
+            <Parameter Name="ngaysuachua" Mode="In" Type="DateTime" />
+            <Parameter Name="nguoisuachua" Mode="In" Type="String" />
+            <Parameter Name="hoadonma" Mode="In" Type="Guid" />
+            <Parameter Name="thietbima" Mode="In" Type="String" />
+            <Parameter Name="chitiethong" Mode="In" Type="String" />
+            <Parameter Name="ghinhan" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_THONGKE_DGTB" ReturnType="Collection(QLPMN2Model.SP_THONGKE_DGTB_Result)" />
+          <FunctionImport Name="SP_THONGKE_DSCHITIET_THIETBISUACHUA" ReturnType="Collection(QLPMN2Model.SP_THONGKE_DSCHITIET_THIETBISUACHUA_Result)" />
+          <FunctionImport Name="SP_THONGKE_DSDIEUCHUYENTB" ReturnType="Collection(QLPMN2Model.SP_THONGKE_DSDIEUCHUYENTB_Result)" />
+          <FunctionImport Name="SP_THONGKE_DSSUACHUATHIETBI" ReturnType="Collection(QLPMN2Model.SP_THONGKE_DSSUACHUATHIETBI_Result)" />
+          <FunctionImport Name="SP_THONGKE_DSTTB" ReturnType="Collection(QLPMN2Model.SP_THONGKE_DSTTB_Result)" />
+          <FunctionImport Name="SP_THONGKEPHANCAP_CHITIET" ReturnType="Collection(QLPMN2Model.SP_THONGKEPHANCAP_CHITIET_Result)" />
+          <FunctionImport Name="SP_THONGKESOLUONG_MAYDC" ReturnType="Collection(QLPMN2Model.SP_THONGKESOLUONG_MAYDC_Result)" />
+          <FunctionImport Name="SP_THONGKESOLUONG_PHUONGMAY" ReturnType="Collection(QLPMN2Model.SP_THONGKESOLUONG_PHUONGMAY_Result)" />
+          <FunctionImport Name="SP_THONGKESUACHUA_CHUASUA" ReturnType="Collection(QLPMN2Model.SP_THONGKESUACHUA_CHUASUA_Result)" />
+          <FunctionImport Name="SP_THONGKESUACHUA_SUATREN5" ReturnType="Collection(QLPMN2Model.SP_THONGKESUACHUA_SUATREN5_Result)" />
+          <FunctionImport Name="SP_THONGTINTHIETBISUACHUA" ReturnType="Collection(QLPMN2Model.SP_THONGTINTHIETBISUACHUA_Result)" />
+          <FunctionImport Name="SP_UPDATE_hoadonmuabosung">
+            <Parameter Name="nguoicap" Mode="In" Type="String" />
+            <Parameter Name="ngaycap" Mode="In" Type="DateTime" />
+            <Parameter Name="soluong" Mode="In" Type="Int32" />
+            <Parameter Name="mota" Mode="In" Type="String" />
+            <Parameter Name="mahienthi" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_UPDATEANDINSERT_DIEUCHUYENTHIETBI">
+            <Parameter Name="ma" Mode="In" Type="Guid" />
+            <Parameter Name="hienthima" Mode="In" Type="String" />
+            <Parameter Name="nguoidieuchuyen" Mode="In" Type="String" />
+            <Parameter Name="ngaydieuchuyen" Mode="In" Type="DateTime" />
+            <Parameter Name="phongdima" Mode="In" Type="String" />
+            <Parameter Name="phongdenma" Mode="In" Type="String" />
+            <Parameter Name="flag" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="SP_UpdateTinhTrangThietBi">
+            <Parameter Name="thietbima" Mode="In" Type="String" />
+            <Parameter Name="tinhtrangma" Mode="In" Type="Int32" />
+            <Parameter Name="ngaydanhgia" Mode="In" Type="DateTime" />
+            <Parameter Name="nguoidanhgia" Mode="In" Type="String" />
+            <Parameter Name="mota" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_XOA_PHONGMAY">
+            <Parameter Name="ma" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Xoachitietdieuchuyen">
+            <Parameter Name="ma" Mode="In" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="SP_XoahoadonDieuchuyen">
+            <Parameter Name="ma" Mode="In" Type="Guid" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="SP_DANHSACHTBSCTRONGHOADON_Result">
+          <Property Type="Guid" Name="ma" Nullable="false" />
+          <Property Type="String" Name="hienthima" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="thietbima" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ten" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="chitiethonghoc" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="nguoisuachua" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="ngaysuachua" Nullable="true" Precision="23" />
+          <Property Type="String" Name="ghinhan" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="SP_DANHSACHTBSCTRONGNAM_Result">
+          <Property Type="Guid" Name="ma" Nullable="false" />
+          <Property Type="String" Name="hienthima" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="thietbima" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ten" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="chitiethonghoc" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="nguoisuachua" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="ngaysuachua" Nullable="true" Precision="23" />
+          <Property Type="String" Name="ghinhan" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="SP_HIENTHI_CHITIETDGTTB_Result">
+          <Property Type="Guid" Name="ma" Nullable="false" />
+          <Property Type="String" Name="thietbima" Nullable="true" MaxLength="50" />
+          <Property Type="Guid" Name="danhgiama" Nullable="true" />
+          <Property Type="String" Name="capchatluong" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="ketqua" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="thoigian" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="SP_HIENTHI_DGTB_THANHLY_Result">
+          <Property Type="String" Name="ma" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ten" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="capchatluong" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="dongia" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="String" Name="Column1" Nullable="false" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="SP_HIENTHI_PHONGMAY_Result">
+          <Property Type="String" Name="maphongmay" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="tenphongmay" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="soluongbienche" Nullable="true" />
+          <Property Type="Int32" Name="soluongthucte" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_HIENTHI_THIETBI_CAUHINH_Result">
+          <Property Type="String" Name="tenmay" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="manhinh" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="diacung" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="vixuly" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="ram" Nullable="true" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="SP_HienThiDanhSachCapNhatTrangThietBi_Result">
+          <Property Type="Guid" Name="ma" Nullable="false" />
+          <Property Type="String" Name="thietbima" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="tinhtrangma" Nullable="true" />
+          <Property Type="String" Name="nguoidanhgia" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="ngaydanhgia" Nullable="true" />
+          <Property Type="String" Name="mota" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_HIENTHIDG_Result">
+          <Property Type="String" Name="mathietbi" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="tenmay" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ram" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="diacung" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="vixuly" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="manhinh" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="dongia" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="String" Name="tenphongmay" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ghichu" Nullable="false" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="SP_Hienthithietbibosungtheothoigian_Result">
+          <Property Type="String" Name="ma" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ten" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ram" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="vixuly" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="manhinh" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="diacung" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="dongia" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="Boolean" Name="ghinhan" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_HienThiTrangThietBiPhongMay_Result">
+          <Property Type="String" Name="matrangtb" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="tentrangtb" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="vixuly" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="diacung" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="manhinh" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ram" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="ghichu" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="tenphongmay" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="dongia" Nullable="true" Precision="18" Scale="0" />
+        </ComplexType>
+        <ComplexType Name="SP_LaychitietDieuchuyen_Result">
+          <Property Type="Guid" Name="ma" Nullable="false" />
+          <Property Type="String" Name="thietbima" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ten" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="vixuly" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="diacung" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="manhinh" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ram" Nullable="true" MaxLength="10" />
+          <Property Type="Guid" Name="dondcma" Nullable="true" />
+          <Property Type="Guid" Name="danhgiama" Nullable="true" />
+          <Property Type="DateTime" Name="ngaydieuchuyen" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="SP_LayhoadonDieuchuyen_Result">
+          <Property Type="Guid" Name="ma" Nullable="false" />
+          <Property Type="String" Name="hienthima" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="nguoidieuchuyen" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="ngaydieuchuyen" Nullable="true" Precision="23" />
+          <Property Type="String" Name="phongdenma" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="phongdima" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="soluong" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_SELECT_chitiethoadonmuabosung_Result">
+          <Property Type="String" Name="hienthima" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="ma" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ten" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="dongia" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="Boolean" Name="ghinhan" Nullable="true" />
+          <Property Type="String" Name="diacung" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="manhinh" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ram" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="vixuly" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="mota" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="SP_TimKiemTheoMaTTB_Result">
+          <Property Type="String" Name="matrangtb" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="tentrangtb" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="vixuly" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="diacung" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="manhinh" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ram" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="ghichu" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="tenphongmay" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="dongia" Nullable="true" Precision="18" Scale="0" />
+        </ComplexType>
+        <ComplexType Name="SP_THONGKE_DGTB_Result">
+          <Property Type="String" Name="thietbima" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="capchatluong" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="nguoidanhgia" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="ngaydanhgia" Nullable="true" Precision="23" />
+          <Property Type="String" Name="mota" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_THONGKE_DSCHITIET_THIETBISUACHUA_Result">
+          <Property Type="String" Name="thietbima" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="tenthietbi" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="chitiethonghoc" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="ngaysuachua" Nullable="true" Precision="23" />
+          <Property Type="String" Name="nguoisuachua" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="donvisuachua" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="SP_THONGKE_DSDIEUCHUYENTB_Result">
+          <Property Type="String" Name="thietbima" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="ngaydieuchuyen" Nullable="true" Precision="23" />
+          <Property Type="String" Name="nguoidieuchuyen" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="phongdima" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="phongdenma" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="SP_THONGKE_DSSUACHUATHIETBI_Result">
+          <Property Type="String" Name="thietbima" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ten" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="solansuachua" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_THONGKE_DSTTB_Result">
+          <Property Type="String" Name="ma" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ten" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="dongia" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="String" Name="vixuly" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="ram" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="diacung" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="manhinh" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="mota" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="tenphongmay" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="SP_THONGKEPHANCAP_CHITIET_Result">
+          <Property Type="String" Name="ma" Nullable="false" MaxLength="20" />
+          <Property Type="Int32" Name="C1" Nullable="true" />
+          <Property Type="Int32" Name="C2" Nullable="true" />
+          <Property Type="Int32" Name="C3" Nullable="true" />
+          <Property Type="Int32" Name="C4" Nullable="true" />
+          <Property Type="Int32" Name="C5" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_THONGKESOLUONG_MAYDC_Result">
+          <Property Type="String" Name="ma" Nullable="false" MaxLength="20" />
+          <Property Type="Int32" Name="somaydieuchuyenden" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_THONGKESOLUONG_PHUONGMAY_Result">
+          <Property Type="String" Name="phongmay" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="soluongbienche" Nullable="true" />
+          <Property Type="Int32" Name="soluongmayhienco" Nullable="true" />
+          <Property Type="Int32" Name="somaydanghoatdong" Nullable="true" />
+          <Property Type="Int32" Name="somaykhonghoatdong" Nullable="true" />
+          <Property Type="Int32" Name="somaydisua" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_THONGKESUACHUA_CHUASUA_Result">
+          <Property Type="String" Name="ma" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ten" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="solansuachua" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_THONGKESUACHUA_SUATREN5_Result">
+          <Property Type="String" Name="thietbima" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ten" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="solansuachua" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_THONGTINTHIETBISUACHUA_Result">
+          <Property Type="Guid" Name="ma" Nullable="false" />
+          <Property Type="Guid" Name="mahd" Nullable="false" />
+          <Property Type="String" Name="hienthima" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="thietbima" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ten" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="chitiethonghoc" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="nguoisuachua" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="ngaysuachua" Nullable="true" Precision="23" />
+          <Property Type="String" Name="ghinhan" Nullable="true" MaxLength="50" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QLPMN2ModelStoreContainer" CdmEntityContainer="QLPMN2Entities">
+          <EntitySetMapping Name="chitietcauhinh">
+            <EntityTypeMapping TypeName="QLPMN2Model.chitietcauhinh">
+              <MappingFragment StoreEntitySet="chitietcauhinh">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="vixuly" ColumnName="vixuly" />
+                <ScalarProperty Name="ram" ColumnName="ram" />
+                <ScalarProperty Name="diacung" ColumnName="diacung" />
+                <ScalarProperty Name="manhinh" ColumnName="manhinh" />
+                <ScalarProperty Name="mota" ColumnName="mota" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="chitietdanhgiatrangthietbi">
+            <EntityTypeMapping TypeName="QLPMN2Model.chitietdanhgiatrangthietbi">
+              <MappingFragment StoreEntitySet="chitietdanhgiatrangthietbi">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="thietbima" ColumnName="thietbima" />
+                <ScalarProperty Name="danhgiama" ColumnName="danhgiama" />
+                <ScalarProperty Name="capchatluong" ColumnName="capchatluong" />
+                <ScalarProperty Name="ketqua" ColumnName="ketqua" />
+                <ScalarProperty Name="thoigian" ColumnName="thoigian" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="chitietdieuchuyenthietbi">
+            <EntityTypeMapping TypeName="QLPMN2Model.chitietdieuchuyenthietbi">
+              <MappingFragment StoreEntitySet="chitietdieuchuyenthietbi">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="thietbima" ColumnName="thietbima" />
+                <ScalarProperty Name="dondcma" ColumnName="dondcma" />
+                <ScalarProperty Name="danhgiama" ColumnName="danhgiama" />
+                <ScalarProperty Name="ngaydieuchuyen" ColumnName="ngaydieuchuyen" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="chitietsuachuathietbi">
+            <EntityTypeMapping TypeName="QLPMN2Model.chitietsuachuathietbi">
+              <MappingFragment StoreEntitySet="chitietsuachuathietbi">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="hoadonma" ColumnName="hoadonma" />
+                <ScalarProperty Name="thietbima" ColumnName="thietbima" />
+                <ScalarProperty Name="ngaysuachua" ColumnName="ngaysuachua" />
+                <ScalarProperty Name="chitiethonghoc" ColumnName="chitiethonghoc" />
+                <ScalarProperty Name="nguoisuachua" ColumnName="nguoisuachua" />
+                <ScalarProperty Name="ghinhan" ColumnName="ghinhan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="chitiethoadonbosung">
+            <EntityTypeMapping TypeName="QLPMN2Model.chitiethoadonbosung">
+              <MappingFragment StoreEntitySet="chitiethoadonbosung">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="ten" ColumnName="ten" />
+                <ScalarProperty Name="dongia" ColumnName="dongia" />
+                <ScalarProperty Name="cauhinhma" ColumnName="cauhinhma" />
+                <ScalarProperty Name="hoadonma" ColumnName="hoadonma" />
+                <ScalarProperty Name="ghinhan" ColumnName="ghinhan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="danhgiatrangthietbi">
+            <EntityTypeMapping TypeName="QLPMN2Model.danhgiatrangthietbi">
+              <MappingFragment StoreEntitySet="danhgiatrangthietbi">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="hienthima" ColumnName="hienthima" />
+                <ScalarProperty Name="nguoidanhgia" ColumnName="nguoidanhgia" />
+                <ScalarProperty Name="ngaydanhgia" ColumnName="ngaydanhgia" />
+                <ScalarProperty Name="mota" ColumnName="mota" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dieuchuyentrangthietbi">
+            <EntityTypeMapping TypeName="QLPMN2Model.dieuchuyentrangthietbi">
+              <MappingFragment StoreEntitySet="dieuchuyentrangthietbi">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="hienthima" ColumnName="hienthima" />
+                <ScalarProperty Name="nguoidieuchuyen" ColumnName="nguoidieuchuyen" />
+                <ScalarProperty Name="ngaydieuchuyen" ColumnName="ngaydieuchuyen" />
+                <ScalarProperty Name="phongdima" ColumnName="phongdima" />
+                <ScalarProperty Name="phongdenma" ColumnName="phongdenma" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hoadonmuabosung">
+            <EntityTypeMapping TypeName="QLPMN2Model.hoadonmuabosung">
+              <MappingFragment StoreEntitySet="hoadonmuabosung">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="hienthima" ColumnName="hienthima" />
+                <ScalarProperty Name="nguoicap" ColumnName="nguoicap" />
+                <ScalarProperty Name="ngaycap" ColumnName="ngaycap" />
+                <ScalarProperty Name="soluong" ColumnName="soluong" />
+                <ScalarProperty Name="mota" ColumnName="mota" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hoadonsuachua">
+            <EntityTypeMapping TypeName="QLPMN2Model.hoadonsuachua">
+              <MappingFragment StoreEntitySet="hoadonsuachua">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="hienthima" ColumnName="hienthima" />
+                <ScalarProperty Name="nguoicap" ColumnName="nguoicap" />
+                <ScalarProperty Name="ngaycap" ColumnName="ngaycap" />
+                <ScalarProperty Name="donvisuachua" ColumnName="donvisuachua" />
+                <ScalarProperty Name="mota" ColumnName="mota" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="phancaptinhtrang">
+            <EntityTypeMapping TypeName="QLPMN2Model.phancaptinhtrang">
+              <MappingFragment StoreEntitySet="phancaptinhtrang">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="tinhtrang" ColumnName="tinhtrang" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="phongmay">
+            <EntityTypeMapping TypeName="QLPMN2Model.phongmay">
+              <MappingFragment StoreEntitySet="phongmay">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="ten" ColumnName="ten" />
+                <ScalarProperty Name="soluongbienche" ColumnName="soluongbienche" />
+                <ScalarProperty Name="soluongthucte" ColumnName="soluongthucte" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tinhtrangthietbi">
+            <EntityTypeMapping TypeName="QLPMN2Model.tinhtrangthietbi">
+              <MappingFragment StoreEntitySet="tinhtrangthietbi">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="thietbima" ColumnName="thietbima" />
+                <ScalarProperty Name="tinhtrangma" ColumnName="tinhtrangma" />
+                <ScalarProperty Name="nguoidanhgia" ColumnName="nguoidanhgia" />
+                <ScalarProperty Name="ngaydanhgia" ColumnName="ngaydanhgia" />
+                <ScalarProperty Name="mota" ColumnName="mota" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="trangthietbi">
+            <EntityTypeMapping TypeName="QLPMN2Model.trangthietbi">
+              <MappingFragment StoreEntitySet="trangthietbi">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="ten" ColumnName="ten" />
+                <ScalarProperty Name="dongia" ColumnName="dongia" />
+                <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+                <ScalarProperty Name="cauhinhma" ColumnName="cauhinhma" />
+                <ScalarProperty Name="phongmayma" ColumnName="phongmayma" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionName="QLPMN2Model.Store.FC_DanhSachPM" FunctionImportName="FC_DanhSachPM">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.FC_DanhSachPM_Result">
+                <ScalarProperty Name="maphongmay" ColumnName="maphongmay" />
+                <ScalarProperty Name="tenphongmay" ColumnName="tenphongmay" />
+                <ScalarProperty Name="soluongbienche" ColumnName="soluongbienche" />
+                <ScalarProperty Name="soluongthucte" ColumnName="soluongthucte" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="QLPMN2Model.Store.FC_DIEUCHUYEN_TTB" FunctionImportName="FC_DIEUCHUYEN_TTB">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.FC_DIEUCHUYEN_TTB_Result">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="phongmayhientai" ColumnName="phongmayhientai" />
+                <ScalarProperty Name="phongmaydieuchuyen" ColumnName="phongmaydieuchuyen" />
+                <ScalarProperty Name="ngaydieuchuyen" ColumnName="ngaydieuchuyen" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="QLPMN2Model.Store.FC_HienThiMayTinhPhongMay" FunctionImportName="FC_HienThiMayTinhPhongMay">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.FC_HienThiMayTinhPhongMay_Result">
+                <ScalarProperty Name="MATRANGTHIETBI" ColumnName="MATRANGTHIETBI" />
+                <ScalarProperty Name="TENTHIETBI" ColumnName="TENTHIETBI" />
+                <ScalarProperty Name="VIXULY" ColumnName="VIXULY" />
+                <ScalarProperty Name="DIACUNG" ColumnName="DIACUNG" />
+                <ScalarProperty Name="MANHINH" ColumnName="MANHINH" />
+                <ScalarProperty Name="RAM" ColumnName="RAM" />
+                <ScalarProperty Name="GHICHU" ColumnName="GHICHU" />
+                <ScalarProperty Name="TENPHONGMAY" ColumnName="TENPHONGMAY" />
+                <ScalarProperty Name="DONGIA" ColumnName="DONGIA" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="QLPMN2Model.Store.FC_HienThiThietBiTheoThoiGian" FunctionImportName="FC_HienThiThietBiTheoThoiGian">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.FC_HienThiThietBiTheoThoiGian_Result">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="ten" ColumnName="ten" />
+                <ScalarProperty Name="ram" ColumnName="ram" />
+                <ScalarProperty Name="vixuly" ColumnName="vixuly" />
+                <ScalarProperty Name="manhinh" ColumnName="manhinh" />
+                <ScalarProperty Name="diacung" ColumnName="diacung" />
+                <ScalarProperty Name="dongia" ColumnName="dongia" />
+                <ScalarProperty Name="ghinhan" ColumnName="ghinhan" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="QLPMN2Model.Store.FC_HienThiTrangThietBiPhongMay" FunctionImportName="FC_HienThiTrangThietBiPhongMay">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.FC_HienThiTrangThietBiPhongMay_Result">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="tenthietbi" ColumnName="tenthietbi" />
+                <ScalarProperty Name="vixuly" ColumnName="vixuly" />
+                <ScalarProperty Name="diacung" ColumnName="diacung" />
+                <ScalarProperty Name="manhinh" ColumnName="manhinh" />
+                <ScalarProperty Name="ram" ColumnName="ram" />
+                <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+                <ScalarProperty Name="tenphongmay" ColumnName="tenphongmay" />
+                <ScalarProperty Name="dongia" ColumnName="dongia" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="QLPMN2Model.Store.FC_MUCDANHGIA_GANNHAT" FunctionImportName="FC_MUCDANHGIA_GANNHAT">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.FC_MUCDANHGIA_GANNHAT_Result">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="tenthietbi" ColumnName="tenthietbi" />
+                <ScalarProperty Name="tenphongmay" ColumnName="tenphongmay" />
+                <ScalarProperty Name="capchatluong" ColumnName="capchatluong" />
+                <ScalarProperty Name="thoigian" ColumnName="thoigian" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="QLPMN2Model.Store.fc_thongkedanhgia" FunctionImportName="fc_thongkedanhgia">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.fc_thongkedanhgia_Result">
+                <ScalarProperty Name="ten" ColumnName="ten" />
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="vixuly" ColumnName="vixuly" />
+                <ScalarProperty Name="ram" ColumnName="ram" />
+                <ScalarProperty Name="diacung" ColumnName="diacung" />
+                <ScalarProperty Name="manhinh" ColumnName="manhinh" />
+                <ScalarProperty Name="mota" ColumnName="mota" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="QLPMN2Model.Store.FC_Thongkedieuchuyen" FunctionImportName="FC_Thongkedieuchuyen">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.FC_Thongkedieuchuyen_Result">
+                <ScalarProperty Name="nguoidieuchuyen" ColumnName="nguoidieuchuyen" />
+                <ScalarProperty Name="ngaydieuchuyen" ColumnName="ngaydieuchuyen" />
+                <ScalarProperty Name="phongmayden" ColumnName="phongmayden" />
+                <ScalarProperty Name="phongmaydi" ColumnName="phongmaydi" />
+                <ScalarProperty Name="soluong" ColumnName="soluong" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_Bosungthietbivaophongmay" FunctionName="QLPMN2Model.Store.SP_Bosungthietbivaophongmay" />
+          <FunctionImportMapping FunctionImportName="SP_CAPNHAT_PHONGMAY" FunctionName="QLPMN2Model.Store.SP_CAPNHAT_PHONGMAY" />
+          <FunctionImportMapping FunctionImportName="SP_CAPNHATTHIETBISUACHUA" FunctionName="QLPMN2Model.Store.SP_CAPNHATTHIETBISUACHUA" />
+          <FunctionImportMapping FunctionImportName="SP_CAPNHATHOADONSC" FunctionName="QLPMN2Model.Store.SP_CAPNHATHOADONSC" />
+          <FunctionImportMapping FunctionImportName="SP_DANHSACHTBSCTRONGHOADON" FunctionName="QLPMN2Model.Store.SP_DANHSACHTBSCTRONGHOADON">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.SP_DANHSACHTBSCTRONGHOADON_Result">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="hienthima" ColumnName="hienthima" />
+                <ScalarProperty Name="thietbima" ColumnName="thietbima" />
+                <ScalarProperty Name="ten" ColumnName="ten" />
+                <ScalarProperty Name="chitiethonghoc" ColumnName="chitiethonghoc" />
+                <ScalarProperty Name="nguoisuachua" ColumnName="nguoisuachua" />
+                <ScalarProperty Name="ngaysuachua" ColumnName="ngaysuachua" />
+                <ScalarProperty Name="ghinhan" ColumnName="ghinhan" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_DANHSACHTBSCTRONGNAM" FunctionName="QLPMN2Model.Store.SP_DANHSACHTBSCTRONGNAM">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.SP_DANHSACHTBSCTRONGNAM_Result">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="hienthima" ColumnName="hienthima" />
+                <ScalarProperty Name="thietbima" ColumnName="thietbima" />
+                <ScalarProperty Name="ten" ColumnName="ten" />
+                <ScalarProperty Name="chitiethonghoc" ColumnName="chitiethonghoc" />
+                <ScalarProperty Name="nguoisuachua" ColumnName="nguoisuachua" />
+                <ScalarProperty Name="ngaysuachua" ColumnName="ngaysuachua" />
+                <ScalarProperty Name="ghinhan" ColumnName="ghinhan" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_HIENTHI_CHITIETDGTTB" FunctionName="QLPMN2Model.Store.SP_HIENTHI_CHITIETDGTTB">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.SP_HIENTHI_CHITIETDGTTB_Result">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="thietbima" ColumnName="thietbima" />
+                <ScalarProperty Name="danhgiama" ColumnName="danhgiama" />
+                <ScalarProperty Name="capchatluong" ColumnName="capchatluong" />
+                <ScalarProperty Name="ketqua" ColumnName="ketqua" />
+                <ScalarProperty Name="thoigian" ColumnName="thoigian" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_HIENTHI_DGTB_THANHLY" FunctionName="QLPMN2Model.Store.SP_HIENTHI_DGTB_THANHLY">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.SP_HIENTHI_DGTB_THANHLY_Result">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="ten" ColumnName="ten" />
+                <ScalarProperty Name="capchatluong" ColumnName="capchatluong" />
+                <ScalarProperty Name="dongia" ColumnName="dongia" />
+                <ScalarProperty Name="Column1" ColumnName="Column1" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_HIENTHI_PHONGMAY" FunctionName="QLPMN2Model.Store.SP_HIENTHI_PHONGMAY">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.SP_HIENTHI_PHONGMAY_Result">
+                <ScalarProperty Name="maphongmay" ColumnName="maphongmay" />
+                <ScalarProperty Name="tenphongmay" ColumnName="tenphongmay" />
+                <ScalarProperty Name="soluongbienche" ColumnName="soluongbienche" />
+                <ScalarProperty Name="soluongthucte" ColumnName="soluongthucte" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_HIENTHI_THIETBI_CAUHINH" FunctionName="QLPMN2Model.Store.SP_HIENTHI_THIETBI_CAUHINH">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.SP_HIENTHI_THIETBI_CAUHINH_Result">
+                <ScalarProperty Name="tenmay" ColumnName="tenmay" />
+                <ScalarProperty Name="manhinh" ColumnName="manhinh" />
+                <ScalarProperty Name="diacung" ColumnName="diacung" />
+                <ScalarProperty Name="vixuly" ColumnName="vixuly" />
+                <ScalarProperty Name="ram" ColumnName="ram" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_HienThiDanhSachCapNhatTrangThietBi" FunctionName="QLPMN2Model.Store.SP_HienThiDanhSachCapNhatTrangThietBi">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.SP_HienThiDanhSachCapNhatTrangThietBi_Result">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="thietbima" ColumnName="thietbima" />
+                <ScalarProperty Name="tinhtrangma" ColumnName="tinhtrangma" />
+                <ScalarProperty Name="nguoidanhgia" ColumnName="nguoidanhgia" />
+                <ScalarProperty Name="ngaydanhgia" ColumnName="ngaydanhgia" />
+                <ScalarProperty Name="mota" ColumnName="mota" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_HIENTHIDG" FunctionName="QLPMN2Model.Store.SP_HIENTHIDG">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.SP_HIENTHIDG_Result">
+                <ScalarProperty Name="mathietbi" ColumnName="mathietbi" />
+                <ScalarProperty Name="tenmay" ColumnName="tenmay" />
+                <ScalarProperty Name="ram" ColumnName="ram" />
+                <ScalarProperty Name="diacung" ColumnName="diacung" />
+                <ScalarProperty Name="vixuly" ColumnName="vixuly" />
+                <ScalarProperty Name="manhinh" ColumnName="manhinh" />
+                <ScalarProperty Name="dongia" ColumnName="dongia" />
+                <ScalarProperty Name="tenphongmay" ColumnName="tenphongmay" />
+                <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_Hienthithietbibosungtheothoigian" FunctionName="QLPMN2Model.Store.SP_Hienthithietbibosungtheothoigian">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.SP_Hienthithietbibosungtheothoigian_Result">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="ten" ColumnName="ten" />
+                <ScalarProperty Name="ram" ColumnName="ram" />
+                <ScalarProperty Name="vixuly" ColumnName="vixuly" />
+                <ScalarProperty Name="manhinh" ColumnName="manhinh" />
+                <ScalarProperty Name="diacung" ColumnName="diacung" />
+                <ScalarProperty Name="dongia" ColumnName="dongia" />
+                <ScalarProperty Name="ghinhan" ColumnName="ghinhan" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_HienThiTrangThietBiPhongMay" FunctionName="QLPMN2Model.Store.SP_HienThiTrangThietBiPhongMay">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.SP_HienThiTrangThietBiPhongMay_Result">
+                <ScalarProperty Name="matrangtb" ColumnName="matrangtb" />
+                <ScalarProperty Name="tentrangtb" ColumnName="tentrangtb" />
+                <ScalarProperty Name="vixuly" ColumnName="vixuly" />
+                <ScalarProperty Name="diacung" ColumnName="diacung" />
+                <ScalarProperty Name="manhinh" ColumnName="manhinh" />
+                <ScalarProperty Name="ram" ColumnName="ram" />
+                <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+                <ScalarProperty Name="tenphongmay" ColumnName="tenphongmay" />
+                <ScalarProperty Name="dongia" ColumnName="dongia" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_INSERT_chitiethoadonbosung" FunctionName="QLPMN2Model.Store.SP_INSERT_chitiethoadonbosung" />
+          <FunctionImportMapping FunctionImportName="SP_INSERT_hoadonmuabosung" FunctionName="QLPMN2Model.Store.SP_INSERT_hoadonmuabosung" />
+          <FunctionImportMapping FunctionImportName="SP_LaychitietDieuchuyen" FunctionName="QLPMN2Model.Store.SP_LaychitietDieuchuyen">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.SP_LaychitietDieuchuyen_Result">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="thietbima" ColumnName="thietbima" />
+                <ScalarProperty Name="ten" ColumnName="ten" />
+                <ScalarProperty Name="vixuly" ColumnName="vixuly" />
+                <ScalarProperty Name="diacung" ColumnName="diacung" />
+                <ScalarProperty Name="manhinh" ColumnName="manhinh" />
+                <ScalarProperty Name="ram" ColumnName="ram" />
+                <ScalarProperty Name="dondcma" ColumnName="dondcma" />
+                <ScalarProperty Name="danhgiama" ColumnName="danhgiama" />
+                <ScalarProperty Name="ngaydieuchuyen" ColumnName="ngaydieuchuyen" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_LayhoadonDieuchuyen" FunctionName="QLPMN2Model.Store.SP_LayhoadonDieuchuyen">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.SP_LayhoadonDieuchuyen_Result">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="hienthima" ColumnName="hienthima" />
+                <ScalarProperty Name="nguoidieuchuyen" ColumnName="nguoidieuchuyen" />
+                <ScalarProperty Name="ngaydieuchuyen" ColumnName="ngaydieuchuyen" />
+                <ScalarProperty Name="phongdenma" ColumnName="phongdenma" />
+                <ScalarProperty Name="phongdima" ColumnName="phongdima" />
+                <ScalarProperty Name="soluong" ColumnName="soluong" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_SELECT_chitiethoadonmuabosung" FunctionName="QLPMN2Model.Store.SP_SELECT_chitiethoadonmuabosung">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.SP_SELECT_chitiethoadonmuabosung_Result">
+                <ScalarProperty Name="hienthima" ColumnName="hienthima" />
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="ten" ColumnName="ten" />
+                <ScalarProperty Name="dongia" ColumnName="dongia" />
+                <ScalarProperty Name="ghinhan" ColumnName="ghinhan" />
+                <ScalarProperty Name="diacung" ColumnName="diacung" />
+                <ScalarProperty Name="manhinh" ColumnName="manhinh" />
+                <ScalarProperty Name="ram" ColumnName="ram" />
+                <ScalarProperty Name="vixuly" ColumnName="vixuly" />
+                <ScalarProperty Name="mota" ColumnName="mota" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_SoLanCapNhatTrangThai" FunctionName="QLPMN2Model.Store.SP_SoLanCapNhatTrangThai" />
+          <FunctionImportMapping FunctionImportName="SP_SUACTDGTTB" FunctionName="QLPMN2Model.Store.SP_SUACTDGTTB" />
+          <FunctionImportMapping FunctionImportName="SP_SuahoadonDieuchuyen" FunctionName="QLPMN2Model.Store.SP_SuahoadonDieuchuyen" />
+          <FunctionImportMapping FunctionImportName="SP_TimKiemTheoMaTTB" FunctionName="QLPMN2Model.Store.SP_TimKiemTheoMaTTB">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.SP_TimKiemTheoMaTTB_Result">
+                <ScalarProperty Name="matrangtb" ColumnName="matrangtb" />
+                <ScalarProperty Name="tentrangtb" ColumnName="tentrangtb" />
+                <ScalarProperty Name="vixuly" ColumnName="vixuly" />
+                <ScalarProperty Name="diacung" ColumnName="diacung" />
+                <ScalarProperty Name="manhinh" ColumnName="manhinh" />
+                <ScalarProperty Name="ram" ColumnName="ram" />
+                <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+                <ScalarProperty Name="tenphongmay" ColumnName="tenphongmay" />
+                <ScalarProperty Name="dongia" ColumnName="dongia" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_THEM_PHONGMAY" FunctionName="QLPMN2Model.Store.SP_THEM_PHONGMAY" />
+          <FunctionImportMapping FunctionImportName="SP_THEMCTDGTTB" FunctionName="QLPMN2Model.Store.SP_THEMCTDGTTB" />
+          <FunctionImportMapping FunctionImportName="SP_THEMDGTTB" FunctionName="QLPMN2Model.Store.SP_THEMDGTTB" />
+          <FunctionImportMapping FunctionImportName="SP_ThemhoadonDieuchuyen" FunctionName="QLPMN2Model.Store.SP_ThemhoadonDieuchuyen" />
+          <FunctionImportMapping FunctionImportName="SP_THEMMOIHOADONSC" FunctionName="QLPMN2Model.Store.SP_THEMMOIHOADONSC" />
+          <FunctionImportMapping FunctionImportName="SP_THEMMOITHIETBISUACHUA" FunctionName="QLPMN2Model.Store.SP_THEMMOITHIETBISUACHUA" />
+          <FunctionImportMapping FunctionImportName="SP_THONGKE_DGTB" FunctionName="QLPMN2Model.Store.SP_THONGKE_DGTB">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.SP_THONGKE_DGTB_Result">
+                <ScalarProperty Name="thietbima" ColumnName="thietbima" />
+                <ScalarProperty Name="capchatluong" ColumnName="capchatluong" />
+                <ScalarProperty Name="nguoidanhgia" ColumnName="nguoidanhgia" />
+                <ScalarProperty Name="ngaydanhgia" ColumnName="ngaydanhgia" />
+                <ScalarProperty Name="mota" ColumnName="mota" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_THONGKE_DSCHITIET_THIETBISUACHUA" FunctionName="QLPMN2Model.Store.SP_THONGKE_DSCHITIET_THIETBISUACHUA">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.SP_THONGKE_DSCHITIET_THIETBISUACHUA_Result">
+                <ScalarProperty Name="thietbima" ColumnName="thietbima" />
+                <ScalarProperty Name="tenthietbi" ColumnName="tenthietbi" />
+                <ScalarProperty Name="chitiethonghoc" ColumnName="chitiethonghoc" />
+                <ScalarProperty Name="ngaysuachua" ColumnName="ngaysuachua" />
+                <ScalarProperty Name="nguoisuachua" ColumnName="nguoisuachua" />
+                <ScalarProperty Name="donvisuachua" ColumnName="donvisuachua" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_THONGKE_DSDIEUCHUYENTB" FunctionName="QLPMN2Model.Store.SP_THONGKE_DSDIEUCHUYENTB">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.SP_THONGKE_DSDIEUCHUYENTB_Result">
+                <ScalarProperty Name="thietbima" ColumnName="thietbima" />
+                <ScalarProperty Name="ngaydieuchuyen" ColumnName="ngaydieuchuyen" />
+                <ScalarProperty Name="nguoidieuchuyen" ColumnName="nguoidieuchuyen" />
+                <ScalarProperty Name="phongdima" ColumnName="phongdima" />
+                <ScalarProperty Name="phongdenma" ColumnName="phongdenma" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_THONGKE_DSSUACHUATHIETBI" FunctionName="QLPMN2Model.Store.SP_THONGKE_DSSUACHUATHIETBI">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.SP_THONGKE_DSSUACHUATHIETBI_Result">
+                <ScalarProperty Name="thietbima" ColumnName="thietbima" />
+                <ScalarProperty Name="ten" ColumnName="ten" />
+                <ScalarProperty Name="solansuachua" ColumnName="solansuachua" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_THONGKE_DSTTB" FunctionName="QLPMN2Model.Store.SP_THONGKE_DSTTB">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.SP_THONGKE_DSTTB_Result">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="ten" ColumnName="ten" />
+                <ScalarProperty Name="dongia" ColumnName="dongia" />
+                <ScalarProperty Name="vixuly" ColumnName="vixuly" />
+                <ScalarProperty Name="ram" ColumnName="ram" />
+                <ScalarProperty Name="diacung" ColumnName="diacung" />
+                <ScalarProperty Name="manhinh" ColumnName="manhinh" />
+                <ScalarProperty Name="mota" ColumnName="mota" />
+                <ScalarProperty Name="tenphongmay" ColumnName="tenphongmay" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_THONGKEPHANCAP_CHITIET" FunctionName="QLPMN2Model.Store.SP_THONGKEPHANCAP_CHITIET">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.SP_THONGKEPHANCAP_CHITIET_Result">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="C1" ColumnName="C1" />
+                <ScalarProperty Name="C2" ColumnName="C2" />
+                <ScalarProperty Name="C3" ColumnName="C3" />
+                <ScalarProperty Name="C4" ColumnName="C4" />
+                <ScalarProperty Name="C5" ColumnName="C5" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_THONGKESOLUONG_MAYDC" FunctionName="QLPMN2Model.Store.SP_THONGKESOLUONG_MAYDC">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.SP_THONGKESOLUONG_MAYDC_Result">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="somaydieuchuyenden" ColumnName="somaydieuchuyenden" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_THONGKESOLUONG_PHUONGMAY" FunctionName="QLPMN2Model.Store.SP_THONGKESOLUONG_PHUONGMAY">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.SP_THONGKESOLUONG_PHUONGMAY_Result">
+                <ScalarProperty Name="phongmay" ColumnName="phongmay" />
+                <ScalarProperty Name="soluongbienche" ColumnName="soluongbienche" />
+                <ScalarProperty Name="soluongmayhienco" ColumnName="soluongmayhienco" />
+                <ScalarProperty Name="somaydanghoatdong" ColumnName="somaydanghoatdong" />
+                <ScalarProperty Name="somaykhonghoatdong" ColumnName="somaykhonghoatdong" />
+                <ScalarProperty Name="somaydisua" ColumnName="somaydisua" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_THONGKESUACHUA_CHUASUA" FunctionName="QLPMN2Model.Store.SP_THONGKESUACHUA_CHUASUA">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.SP_THONGKESUACHUA_CHUASUA_Result">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="ten" ColumnName="ten" />
+                <ScalarProperty Name="solansuachua" ColumnName="solansuachua" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_THONGKESUACHUA_SUATREN5" FunctionName="QLPMN2Model.Store.SP_THONGKESUACHUA_SUATREN5">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.SP_THONGKESUACHUA_SUATREN5_Result">
+                <ScalarProperty Name="thietbima" ColumnName="thietbima" />
+                <ScalarProperty Name="ten" ColumnName="ten" />
+                <ScalarProperty Name="solansuachua" ColumnName="solansuachua" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_THONGTINTHIETBISUACHUA" FunctionName="QLPMN2Model.Store.SP_THONGTINTHIETBISUACHUA">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QLPMN2Model.SP_THONGTINTHIETBISUACHUA_Result">
+                <ScalarProperty Name="ma" ColumnName="ma" />
+                <ScalarProperty Name="mahd" ColumnName="mahd" />
+                <ScalarProperty Name="hienthima" ColumnName="hienthima" />
+                <ScalarProperty Name="thietbima" ColumnName="thietbima" />
+                <ScalarProperty Name="ten" ColumnName="ten" />
+                <ScalarProperty Name="chitiethonghoc" ColumnName="chitiethonghoc" />
+                <ScalarProperty Name="nguoisuachua" ColumnName="nguoisuachua" />
+                <ScalarProperty Name="ngaysuachua" ColumnName="ngaysuachua" />
+                <ScalarProperty Name="ghinhan" ColumnName="ghinhan" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_UPDATE_hoadonmuabosung" FunctionName="QLPMN2Model.Store.SP_UPDATE_hoadonmuabosung" />
+          <FunctionImportMapping FunctionImportName="SP_UPDATEANDINSERT_DIEUCHUYENTHIETBI" FunctionName="QLPMN2Model.Store.SP_UPDATEANDINSERT_DIEUCHUYENTHIETBI" />
+          <FunctionImportMapping FunctionImportName="SP_UpdateTinhTrangThietBi" FunctionName="QLPMN2Model.Store.SP_UpdateTinhTrangThietBi" />
+          <FunctionImportMapping FunctionImportName="SP_XOA_PHONGMAY" FunctionName="QLPMN2Model.Store.SP_XOA_PHONGMAY" />
+          <FunctionImportMapping FunctionImportName="SP_Xoachitietdieuchuyen" FunctionName="QLPMN2Model.Store.SP_Xoachitietdieuchuyen" />
+          <FunctionImportMapping FunctionImportName="SP_XoahoadonDieuchuyen" FunctionName="QLPMN2Model.Store.SP_XoahoadonDieuchuyen" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

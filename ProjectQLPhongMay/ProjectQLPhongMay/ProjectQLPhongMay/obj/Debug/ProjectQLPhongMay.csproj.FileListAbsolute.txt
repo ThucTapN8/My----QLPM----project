@@ -1,0 +1,129 @@
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\bin\Debug\ProjectQLPhongMay.exe
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\bin\Debug\ProjectQLPhongMay.pdb
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.csprojResolveAssemblyReference.cache
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.Properties.Resources.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.csproj.GenerateResource.Cache
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.exe.licenses
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.exe
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.pdb
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.frmHome.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.Uc_PhongMay.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\bin\Debug\vi-VN\ProjectQLPhongMay.resources.dll
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.frmHome.vi-VN.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\vi-VN\ProjectQLPhongMay.resources.dll
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.UcHoadonSC.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.UcSuaChuaTB.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.FrmHoaDonSC.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.FrmSuaChua.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.FrmThemMoiSCTB.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.UC_TrangThietBi.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.form_CapNhatGhiChu.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.UC_Bosungtrangthietbi.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.frm_Bosungtrangthietbi.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.frm_Chitiethoadonbosung.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.frm_Hoadonbosung.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.frm_Timkiemthietbibosung.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.UcDieuChuyen.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.frmDieuchuyen.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.FrmDangNhap.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.UcDanhGiaTTB.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.frm_ThemChiTietDGTTB.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.Frm_ThemDGTTB.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.frm_TimKiem.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.uc.ucDanhgia_Ct.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.uc.ucDanhgia_Pc.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.uc.ucDieuChuyen_Ct.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.uc.ucDieuChuyen_SL.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.uc.ucSuachua_CS.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.uc.ucSuaChua_Ct.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.uc.ucSuachua_Sl.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.uc.ucSuachua_SN.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.uc.ucTTB_Ct.resources
+E:\hoc tap\Thuc tap CSDL\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.uc.ucTTB_SL.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.exe
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.pdb
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\bin\Debug\ProjectQLPhongMay.exe
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\bin\Debug\ProjectQLPhongMay.pdb
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\bin\Debug\vi-VN\ProjectQLPhongMay.resources.dll
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.FrmDangNhap.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.frmHome.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.Properties.Resources.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.UcDanhGiaTTB.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.uc.ucDanhgia_Ct.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.uc.ucDanhgia_Pc.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.UcDieuChuyen.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.uc.ucDieuChuyen_Ct.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.uc.ucDieuChuyen_SL.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.UcHoadonSC.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.UcSuaChuaTB.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.uc.ucSuachua_CS.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.uc.ucSuaChua_Ct.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.uc.ucSuachua_Sl.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.uc.ucSuachua_SN.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.uc.ucTTB_Ct.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.uc.ucTTB_SL.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.UC_Bosungtrangthietbi.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.Uc_PhongMay.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.UC_TrangThietBi.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.form_CapNhatGhiChu.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.frmDieuchuyen.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.FrmHoaDonSC.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.FrmSuaChua.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.FrmThemMoiSCTB.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.frm_Bosungtrangthietbi.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.frm_Chitiethoadonbosung.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.frm_Hoadonbosung.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.frm_ThemChiTietDGTTB.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.Frm_ThemDGTTB.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.frm_TimKiem.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.frm_Timkiemthietbibosung.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.frmHome.vi-VN.resources
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.csproj.GenerateResource.Cache
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.exe.licenses
+C:\Users\Administrator\Downloads\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\vi-VN\ProjectQLPhongMay.resources.dll
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.exe
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.pdb
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\bin\Debug\ProjectQLPhongMay.exe
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\bin\Debug\ProjectQLPhongMay.pdb
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\bin\Debug\vi-VN\ProjectQLPhongMay.resources.dll
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.csprojResolveAssemblyReference.cache
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.FrmDangNhap.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.frmHome.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.Properties.Resources.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.UcDanhGiaTTB.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.uc.ucDanhgia_Ct.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.uc.ucDanhgia_Pc.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.UcDieuChuyen.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.uc.ucDieuChuyen_Ct.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.uc.ucDieuChuyen_SL.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.UcHoadonSC.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.UcSuaChuaTB.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.uc.ucSuachua_CS.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.uc.ucSuaChua_Ct.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.uc.ucSuachua_Sl.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.uc.ucSuachua_SN.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.uc.ucTTB_Ct.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.uc.ucTTB_SL.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.UC_Bosungtrangthietbi.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.Uc_PhongMay.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.UC_TrangThietBi.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.form_CapNhatGhiChu.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.frmDieuchuyen.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.FrmHoaDonSC.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.FrmSuaChua.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.FrmThemMoiSCTB.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.frm_Bosungtrangthietbi.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.frm_Chitiethoadonbosung.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.frm_Hoadonbosung.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.frm_ThemChiTietDGTTB.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.Frm_ThemDGTTB.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.frm_TimKiem.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.frm_Timkiemthietbibosung.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.frmHome.vi-VN.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.csproj.GenerateResource.Cache
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.exe.licenses
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\vi-VN\ProjectQLPhongMay.resources.dll
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.UserControls.uc_Bosung_Pm.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.UserControls.uc_Bosung_Tb.resources
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\bin\Debug\ProjectQLPhongMay.exe.config
+D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.UserControls.ucDanhgia_TL.resources
