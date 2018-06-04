@@ -127,3 +127,6 @@ D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLP
 D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.UserControls.uc_Bosung_Tb.resources
 D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\bin\Debug\ProjectQLPhongMay.exe.config
 D:\Mai Mon\Học - Năm 3\TT-CSDL\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.UserControls.ucDanhgia_TL.resources
+C:\Users\Administrator\Documents\GitHub\My----QLPM----project\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\bin\Debug\ProjectQLPhongMay.exe.config
+C:\Users\Administrator\Documents\GitHub\My----QLPM----project\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.exe
+C:\Users\Administrator\Documents\GitHub\My----QLPM----project\ProjectQLPhongMay\ProjectQLPhongMay\ProjectQLPhongMay\obj\Debug\ProjectQLPhongMay.pdb
